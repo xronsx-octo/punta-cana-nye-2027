@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Punta Cana · Los mejores todo incluido solo adultos · Guía costo-beneficio</title>
-<meta name="description" content="Censo completo de hoteles todo incluido solo adultos en Punta Cana, Bávaro, Cap Cana y Uvero Alto: reseñas 2025-26, playas, traslados, albercas, comida y precios estimados para 2 adultos.">
+<title>Punta Cana · 18 resorts todo incluido con precios por habitación · Guía costo-beneficio</title>
+<meta name="description" content="18 resorts todo incluido de Punta Cana con precios por tipo de habitación, fotos, links oficiales, playas y traslados. Solo adultos, secciones 18+ y familiares.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -136,6 +136,30 @@ ul.check li:before{content:"\2713";position:absolute;left:4px;top:8px;width:18px
 .stat{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:16px 18px;text-align:left}
 .stat .v{font-family:Fraunces,Georgia,serif;font-size:1.5rem;font-weight:700;color:#ffd98a;line-height:1.15}
 .stat .l{font-size:.79rem;opacity:.88;margin-top:4px}
+
+/* fichas de hotel con galería */
+.hotel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin:20px 0;box-shadow:0 1px 3px rgba(11,61,76,.05)}
+.hhead h3{margin:0 0 3px;font-size:1.25rem}
+.hmeta{font-size:.82rem;color:var(--muted);margin-bottom:14px}
+.hgal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 14px}
+.hgal .hgi{position:relative;display:block;aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#0b3d4c,#0e7c86);text-decoration:none}
+.hgal .hgi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.hgal .hgi:hover img{transform:scale(1.05)}
+.hgal .hgc{position:absolute;left:0;right:0;bottom:0;padding:14px 10px 7px;font-size:.73rem;color:#fff;font-weight:600;background:linear-gradient(transparent,rgba(7,42,53,.8))}
+.hgal .hgi.noimg img{display:none}
+.hgal .hgi.noimg:after{content:"Ver galería oficial ↗";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.8rem;font-weight:600;text-align:center;padding:10px}
+.hgal.nogal{grid-template-columns:1fr;background:#faf7f1;border:1px dashed var(--line);border-radius:12px;padding:14px 16px;display:block}
+.hgal.nogal a{font-weight:600}
+.hgal.nogal .small{display:block;margin-top:3px}
+@media(max-width:640px){.hgal{grid-template-columns:1fr 1fr}.hgal .hgi:nth-child(3){display:none}}
+.hdatos{font-size:.87rem;color:#3d4750;margin:0 0 10px}
+.halert{background:#fff5f3;border-left:4px solid var(--coral);border-radius:0 8px 8px 0;padding:9px 13px;font-size:.85rem;margin:0 0 12px}
+table.rooms{min-width:720px;font-size:.84rem}
+table.rooms td.inc{color:#52514e;font-size:.81rem;max-width:280px}
+table.rooms td.tot{font-weight:700;color:var(--deep)}
+.hlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.btn{display:inline-block;background:var(--deep);color:#fff;text-decoration:none;padding:7px 15px;border-radius:999px;font-size:.8rem;font-weight:600;transition:background .2s}
+.btn:hover{background:var(--teal);color:#fff}
 </style></head>
 <body data-cur="mxn">
 
@@ -143,317 +167,123 @@ ul.check li:before{content:"\2713";position:absolute;left:4px;top:8px;width:18px
 <div class="brand">Viaje <span>dic 26 · ene 27</span></div>
 <div class="dest"><a class="act" href="index.html">Punta Cana</a><a href="mexico.html">Caribe Mexicano</a><a href="comparador.html">★ Comparador</a></div>
 <div class="links">
-<a href="#reco">Recomendación</a><a href="#ranking">Ranking</a><a href="#playas">Playas</a><a href="#acceso">Traslados</a><a href="#hoteles">Hoteles</a><a href="#precios">Precios</a><a href="#videos">Videos</a><a href="#cobertura">Cobertura</a><a href="#checklist">Checklist</a>
+<a href="#reco">Recomendación</a><a href="#adultos">Solo adultos</a><a href="#familiar">Familiares</a><a href="#playas">Playas</a><a href="#acceso">Traslados</a><a href="#checklist">Checklist</a>
 </div>
 <div class="curswitch"><button id="btnMXN" class="act" onclick="setCur('mxn')">MXN</button><button id="btnUSD" onclick="setCur('usd')">USD</button></div>
 </div></nav>
 
 <header class="hero">
-<h1>Punta Cana <em>solo adultos</em><br>El mejor todo incluido por lo que cuesta</h1>
-<p class="sub">Censo completo por cadena de Bávaro, Arena Gorda, Cap Cana, Uvero Alto y Cabeza de Toro — incluidas las secciones 18+ dentro de complejos familiares. Reseñas 2025-2026, playas con nota de invierno, traslados reales desde PUJ, albercas y pool bar, comida y precios estimados para 4 noches.</p>
+<h1>Punta Cana <em>todo incluido</em><br>18 resorts con precios por tipo de habitación</h1>
+<p class="sub">Solo adultos, secciones 18+ y opciones familiares. Cada hotel con su desglose completo de habitaciones y precios, fotos de habitación, albercas y playa, y enlaces directos a su sitio oficial, su página de habitaciones y su galería.</p>
 <div class="chips">
 <span class="chip">29 dic 2026 → 2 ene 2027 · 4 noches</span>
-<span class="chip">2 adultos</span>
-<span class="chip">Todo incluido · solo adultos</span>
-<span class="chip">Desde TripAdvisor 4.3</span>
+<span class="chip">Precios para 2 adultos</span>
+<span class="chip">12 solo adultos + 6 familiares</span>
 <span class="chip">Datos: 2 ago 2026 · 1 USD ≈ 17.35 MXN</span>
 </div>
 <div class="stats">
-<div class="stat"><div class="v">26 hoteles</div><div class="l">solo adultos censados marca por marca en 5 zonas</div></div>
-<div class="stat"><div class="v"><span class="mxn">MXN 29,500</span><span class="usd">USD 1,700</span></div><div class="l">desde — 4 noches, 2 adultos, en el mejor costo-beneficio</div></div>
-<div class="stat"><div class="v">4 h 50 m</div><div class="l">de vuelo directo desde CDMX; requiere pasaporte y e-ticket</div></div>
+<div class="stat"><div class="v">18 resorts</div><div class="l">con desglose de habitaciones y links oficiales</div></div>
+<div class="stat"><div class="v">100+ categorías</div><div class="l">de habitación con m², ocupación y precio</div></div>
+<div class="stat"><div class="v"><span class="mxn">MXN 27,800</span><span class="usd">USD 1,600</span></div><div class="l">desde — 4 noches, 2 adultos, categoría base más barata</div></div>
 <div class="stat"><div class="v">9 / 10</div><div class="l">playa: Bávaro y Juanillo están entre las mejores del Caribe</div></div>
 </div>
 </header>
 
 <div class="wrap">
 
-<div class="card note" style="margin-top:26px"><b>Qué es esta página.</b> El análisis de Punta Cana rehecho como <b>censo por cadena</b>, no como lista incremental, y reorientado a una sola pregunta: <b>cuál hotel da más por lo que cuesta</b>. Cambios de esta edición: se aceptan secciones solo-adultos dentro de complejos familiares (que es como entraron Majestic Colonial, Majestic Mirage y Paradisus Palma Real), el listón baja a TripAdvisor 4.3, y se corrigieron dos errores de ediciones anteriores — <b>Lopesan Costa Bávaro y Grand Sirenis no son solo adultos</b>. Los precios son <b>estimaciones</b> construidas con rangos reales de TripAdvisor/Kayak más el recargo festivo documentado por hotel; verifica siempre en el motor de reservas. Comparación entre destinos en el <a href="comparador.html">Comparador</a>.</div>
+<div class="card note" style="margin-top:26px"><b>Cómo leer los precios.</b> Cada tabla trae el desglose real de categorías de habitación de la web oficial del hotel, con metros cuadrados, ocupación máxima y qué incluye. En la columna de precio verás dos marcas: <b>OF</b> es la tarifa "desde" publicada hoy en el sitio oficial (temporada baja), y <b>EST</b> es la estimación para la semana de fin de año, calculada aplicando el recargo festivo documentado (los resorts de Punta Cana cotizan entre 1.9 y 2.2 veces su tarifa base en Nochevieja). El total de 4 noches es para <b>2 adultos</b> salvo en la sección familiar, donde es para <b>2 adultos y 2 niños</b>. Usa el botón MXN/USD de la barra superior para cambiar de moneda. <b>Verifica siempre el precio final en el motor de reservas antes de pagar.</b></div>
+
+<div class="card alert"><b>Dos avisos que cambian la decisión.</b> Primero: la mayoría de resorts de Punta Cana imponen <b>estancia mínima de 5 a 7 noches</b> sobre Nochevieja, así que un viaje de 4 noches puede no ser reservable en varias categorías — confírmenlo antes de cerrar los vuelos. Segundo: <b>Majestic Colonial está cerrado por una renovación de USD 35 millones y reabre el 12 de noviembre de 2026</b>, apenas siete semanas antes del viaje: producto nuevo, pero con riesgo de rodaje.</div>
 
 <section id="reco">
 <span class="kicker">01 · Veredicto</span>
-<h2>Qué reservar en Punta Cana</h2>
-<div class="card win"><b class="serif" style="font-size:1.15rem">Mejor equilibrio: Secrets Royal Beach Punta Cana — <span class="mxn">MXN 43,400–55,500</span><span class="usd">USD 2,500–3,200</span> las 4 noches para 2 adultos.</b><br><br>
-Es el hotel dominicano que mejor puntúa en el conjunto de tus criterios. TripAdvisor <b>4.6 con 23,532 reseñas</b> (#20 de 169 en Punta Cana) — reputación grande y estable, no una muestra chica. Está en el <b>tramo central de Bávaro, a 10-15 minutos caminando de Los Corales y El Cortecito</b>: es el único de su nivel donde puedes salir a cenar fuera, tomar algo en un bar local o comprar en una farmacia sin pedir taxi. La playa es de las anchas de Bávaro (90 m, la más palmeada del tramo), tiene alberca infinity de dos niveles y río lento, y 5 restaurantes à la carte <b>sin reserva</b> — detalle que en fechas llenas vale oro. Reconstruido en 2020, sin obras. A ~30 min del aeropuerto.<br><br>
-<b>Sus peros honestos:</b> la zona no-Preferred se siente más vieja que la Preferred, el buffet queda por debajo de los à la carte, y en diciembre puede haber sargazo residual.</div>
+<h2>Qué reservar</h2>
 <div class="grid2">
-<div class="card"><b>Mejor precio con buena reputación: Majestic Colonial – Colonial Club</b> (<span class="mxn">MXN 29,500–38,200</span><span class="usd">USD 1,700–2,200</span>). El hallazgo de esta ronda: cuesta lo mismo que el Barceló Bávaro Beach pero está <b>#2 de 56 hoteles de Bávaro con 4.5 sobre 26,388 reseñas</b>. Su sección Colonial Club es solo-adultos de verdad — alberca privada, zona de playa reservada con camas balinesas, restaurantes exclusivos de desayuno y comida, check-in privado y mayordomo. Matsuri (teppanyaki) y Tres Carabelas (mariscos) muy elogiados; playa peinada antes del amanecer. Contra: Arena Gorda no es céntrico (10-15 min en taxi a El Cortecito) y la alberca del Club es la más modesta de la familia Majestic.</div>
-<div class="card"><b>El más céntrico y el de más restaurantes: TRS Turquesa</b> (<span class="mxn">MXN 36,400–46,800</span><span class="usd">USD 2,100–2,700</span>). La torre solo-adultos del complejo Grand Palladium, con <b>walkability 87/100 — 29 restaurantes a menos de 500 metros</b> y El Cortecito literalmente al lado. Mayordomo incluido, swim-up bar propio, acceso a las 6 albercas y los 40+ restaurantes y bares del complejo, más la alberca nocturna "The Secret" y la White Party semanal en la playa. TA 4.5 con 20,636 reseñas. Contra: infraestructura envejecida (mobiliario viejo reportado en 2025) y servicio polarizado en picos.</div>
-<div class="card"><b>Si el presupuesto estira — el mejor producto: Majestic Mirage – Mirage Club</b> (<span class="mxn">MXN 39,000–55,500</span><span class="usd">USD 2,250–3,200</span>). <b>#7 de 170 hoteles de todo Punta Cana con TA 4.7</b>. La sección tiene <b>ocho albercas privadas</b>, playa privada, check-in VIP en lobby propio, dos rooftop lounges frente al mar y mayordomo 24 h — y está físicamente separada con acceso restringido 18+, no es marketing. Es la mejor ejecución de "solo adultos dentro de complejo" de la isla. Contra: no puedes pedir comida en playa ni alberca (queja textual de 2026) y el room service es mediocre.</div>
-<div class="card"><b>La mejor comida y la mejor nota: JOIA Bávaro by Iberostar</b> (<span class="mxn">MXN 55,500–72,900</span><span class="usd">USD 3,200–4,200</span>). <b>#1 de 56 en Bávaro con TA 4.8</b> y Travelers' Choice Best of the Best 2026. Gastronomía top (Le Tourbillon de alta cocina francesa, El Galeón surf & turf) con una de las cartas de vinos incluidos más extensas del Caribe, mayordomo por habitación y — dato clave para diciembre — <b>albercas climatizadas</b>, confirmadas por reseña de invierno. Traslado gratis reservando 3+ noches directo con Iberostar. Contra: enclave en Arena Gorda sin nada caminando, habitaciones algo datadas y "demasiado tranquilo" para quien busque fiesta.</div>
+<div class="card win"><b>Mejor equilibrio: Secrets Royal Beach.</b> TripAdvisor 4.6 con 23,532 reseñas, a 10-15 minutos caminando de Los Corales y El Cortecito — el único de su nivel donde se sale a cenar fuera sin taxi. Junior Suite desde <span class="mxn">MXN 54,500</span><span class="usd">USD 3,140</span> las 4 noches; la <b>Preferred Club Swim Up</b> a <span class="mxn">MXN 87,100</span><span class="usd">USD 5,020</span> es el capricho que más rinde. Playa de 105 m de ancho y 5 à la carte sin reserva.</div>
+<div class="card"><b>Mejor precio: Barceló Bávaro Beach.</b> La Superior arranca en <span class="mxn">MXN 27,800</span><span class="usd">USD 1,600</span> las 4 noches — la tarifa más baja del estudio, con la mejor playa (9/10). El salto fino es la <b>Superior Swim Up Premium Level</b> a <span class="mxn">MXN 41,600</span><span class="usd">USD 2,400</span>. Contra: habitaciones viejas y comida propia limitada.</div>
+<div class="card"><b>Mejores albercas: Majestic Mirage · Mirage Club.</b> Suites de <b>93 m²</b> desde <span class="mxn">MXN 59,700</span><span class="usd">USD 3,440</span>, con 8 albercas privadas del Club, 3 swim-up bars exclusivos y acceso 18+ restringido de verdad. Es el mejor metro cuadrado por peso de todo Punta Cana y el #7 de 170 hoteles del destino.</div>
+<div class="card"><b>Mejor comida: JOIA Bávaro by Iberostar.</b> #1 de 56 en Bávaro con 4.8, mayordomo por habitación y — clave para diciembre — <b>albercas climatizadas</b>. Desde <span class="mxn">MXN 69,400</span><span class="usd">USD 4,000</span>. Su pero: suites de solo 33 m², el peor metro cuadrado por peso de la lista; se paga el servicio y el golf, no el espacio.</div>
 </div>
-<div class="card alert"><b>Advertencia sobre las albercas de Cap Cana.</b> Secrets Cap Cana y Hyatt Zilara Cap Cana son los dos hoteles mejor calificados del país (4.8 y 4.9) y tienen la mejor playa (Juanillo, 9/10), pero <b>ninguno climatiza sus albercas</b> y hay quejas explícitas de agua fría en enero y febrero: "Not heated. The water is cold! Very few people were in the pool… in January". Para un viaje de 4 noches en pleno invierno, si la idea es pasar horas dentro del agua, es un riesgo documentado. Los jacuzzis son el plan B.</div>
 </section>
 
-<section id="ranking">
-<span class="kicker">02 · Panorama</span>
-<h2>Ranking: los 26 solo adultos de Punta Cana</h2>
-<p class="lead">Censo completo, ordenado por relación calidad-precio bajo este brief. Filtra por perfil. Notas de TripAdvisor capturadas el 2 de agosto de 2026; totales por 4 noches, 2 adultos, solo hotel.</p>
-<div class="fchips" id="rankFilters">
-<button class="act" data-f="all">Todos</button>
-<button data-f="valor">Mejor valor</button>
-<button data-f="centrico">Céntricos</button>
-<button data-f="lujo">Lujo</button>
-<button data-f="fiesta">Fiesta</button>
-<button data-f="seccion">Secciones 18+</button>
-<button data-f="desc">Descartados</button>
-</div>
-<div class="tblwrap"><table id="rankTable">
-<thead><tr><th>#</th><th>Hotel</th><th>Cadena</th><th>Zona</th><th>TripAdvisor</th><th>Playa</th><th class="num">PUJ</th><th class="num">Est. 4 noches</th><th>Veredicto</th></tr></thead>
-<tbody>
-<tr data-f="valor centrico seccion"><td>1</td><td><b>Majestic Colonial · Colonial Club</b> <span class="tag best">Mejor precio</span></td><td>Majestic</td><td>Arena Gorda</td><td>4.5 · 26,388 · <b>#2/56 Bávaro</b></td><td><span class="score s8">8.5</span></td><td class="num">25-30 min</td><td class="num"><span class="mxn">29,500–38,200</span><span class="usd">$1,700–2,200</span></td><td>Reputación top al precio del más barato; sección 18+ real</td></tr>
-<tr data-f="valor centrico"><td>2</td><td><b>Secrets Royal Beach</b> <span class="tag best">Mejor equilibrio</span></td><td>Hyatt Inclusive</td><td>Bávaro / Los Corales</td><td>4.6 · 23,532 · #20/169</td><td><span class="score s8">8.5</span></td><td class="num">30 min</td><td class="num"><span class="mxn">43,400–55,500</span><span class="usd">$2,500–3,200</span></td><td>El único de su nivel que camina a Los Corales</td></tr>
-<tr data-f="valor centrico seccion"><td>3</td><td><b>TRS Turquesa</b></td><td>Palladium</td><td>Bávaro / El Cortecito</td><td>4.5 · 20,636 · #19/56</td><td><span class="score s7">7</span></td><td class="num">25 min</td><td class="num"><span class="mxn">36,400–46,800</span><span class="usd">$2,100–2,700</span></td><td>Walkability 87/100 y 40+ restaurantes de complejo</td></tr>
-<tr data-f="lujo seccion"><td>4</td><td><b>Majestic Mirage · Mirage Club</b></td><td>Majestic</td><td>Arena Gorda</td><td><b>4.7</b> · 16,719 · <b>#7/170</b></td><td><span class="score s8">8.5</span></td><td class="num">25-30 min</td><td class="num"><span class="mxn">39,000–55,500</span><span class="usd">$2,250–3,200</span></td><td>8 albercas privadas; la mejor sección 18+ de la isla</td></tr>
-<tr data-f="valor centrico"><td>5</td><td>Barceló Bávaro Beach</td><td>Barceló</td><td>Bávaro</td><td>4.4 · 16,448 · #23/56</td><td><span class="score s9">9</span></td><td class="num">25 min</td><td class="num"><span class="mxn">31,200–48,600</span><span class="usd">$1,800–2,800</span></td><td>Gran playa y complejo caminando; habitaciones viejas y comida floja</td></tr>
-<tr data-f="centrico seccion"><td>6</td><td>Paradisus Palma Real · The Reserve</td><td>Meliá</td><td>Bávaro / Palma Real</td><td>4.5 · 26,487 · #8/56</td><td><span class="score s8">8</span></td><td class="num">20 min</td><td class="num"><span class="mxn">38,200–52,100</span><span class="usd">$2,200–3,000</span></td><td>Plaza comercial enfrente; la comida llega tibia (queja repetida)</td></tr>
-<tr data-f="valor centrico"><td>7</td><td>Meliá Punta Cana Beach</td><td>Meliá</td><td>Bávaro / Palma Real</td><td>4.4 · 12,019 · #15/56</td><td><span class="score s7">7.5</span></td><td class="num">25 min</td><td class="num"><span class="mxn">33,000–44,200</span><span class="usd">$1,900–2,550</span></td><td>Wellness renovado, Palma Real a 15 min a pie; solo 3 à la carte sin The Level</td></tr>
-<tr data-f="lujo"><td>8</td><td><b>JOIA Bávaro by Iberostar</b></td><td>Iberostar</td><td>Arena Gorda</td><td><b>4.8</b> · 16,193 · <b>#1/56 Bávaro</b></td><td><span class="score s8">8</span></td><td class="num">25 min</td><td class="num"><span class="mxn">55,500–72,900</span><span class="usd">$3,200–4,200</span></td><td>Mejor comida y vinos; albercas climatizadas; enclave y tranquilo</td></tr>
-<tr data-f="valor"><td>9</td><td>Excellence El Carmen</td><td>Excellence</td><td>Uvero Alto</td><td>4.6 · 13,255 · #4/9</td><td><span class="score s6">6.5</span></td><td class="num">45-50 min</td><td class="num"><span class="mxn">41,600–53,800</span><span class="usd">$2,400–3,100</span></td><td>20 albercas y suites swim-up por precio medio; esperas en restaurantes</td></tr>
-<tr data-f="fiesta"><td>10</td><td>Breathless Punta Cana</td><td>Hyatt Inclusive</td><td>Uvero Alto</td><td>4.5 · 22,120 · #37/170</td><td><span class="score s5">5.5</span></td><td class="num">45 min</td><td class="num"><span class="mxn">38,200–48,600</span><span class="usd">$2,200–2,800</span></td><td>El mejor entretenimiento de RD; comida irregular y playa brava</td></tr>
-<tr data-f="valor centrico"><td>11</td><td>Royalton Hideaway Punta Cana</td><td>Royalton / Marriott</td><td>Bávaro</td><td>4.4 · 3,685 · #18/56</td><td><span class="score s7">7</span></td><td class="num">25 min</td><td class="num"><span class="mxn">31,200–41,600</span><span class="usd">$1,800–2,400</span></td><td>Barato con puntos Bonvoy, pero una sola alberca y quejas de limpieza</td></tr>
-<tr data-f="lujo centrico"><td>12</td><td>TRS Cap Cana Waterfront & Marina</td><td>Palladium</td><td>Marina Cap Cana</td><td>4.5 · 3,814 · #7/11</td><td><span class="score s5">5</span></td><td class="num"><b>15 min</b></td><td class="num"><span class="mxn">38,200–52,100</span><span class="usd">$2,200–3,000</span></td><td>Solo 115 suites y marina caminando; playa artificial diminuta</td></tr>
-<tr data-f="lujo"><td>13</td><td>Sanctuary Cap Cana</td><td>Marriott Luxury Collection</td><td>Cap Cana</td><td>4.7 · 12,246 · #5/11</td><td><span class="score s6">6</span></td><td class="num">20 min</td><td class="num"><span class="mxn">48,600–65,900</span><span class="usd">$2,800–3,800</span></td><td>Romántico con gran spa; reseñas 2026 con moho y playa con sargazo</td></tr>
-<tr data-f="valor"><td>14</td><td>Excellence Punta Cana</td><td>Excellence</td><td>Uvero Alto</td><td>4.5 · 25,140 · #2/9</td><td><span class="score s6">6</span></td><td class="num">45-50 min</td><td class="num"><span class="mxn">39,900–52,100</span><span class="usd">$2,300–3,000</span></td><td>Sólido y todo-suites; zona aislada</td></tr>
-<tr data-f="lujo"><td>15</td><td>Secrets Tides Punta Cana</td><td>Hyatt Inclusive</td><td>Uvero Alto</td><td>4.6 · 2,719 · <b>#9/169</b></td><td><span class="score s6">6</span></td><td class="num">45 min</td><td class="num"><span class="mxn">48,600–62,500</span><span class="usd">$2,800–3,600</span></td><td>Lo más nuevo de Uvero Alto (2024); servicio aún en rodaje</td></tr>
-<tr data-f="lujo"><td>16</td><td><b>Secrets Cap Cana</b></td><td>Hyatt Inclusive</td><td>Cap Cana / Juanillo</td><td><b>4.8</b> · 25,939 · #2/11</td><td><span class="score s9">9</span></td><td class="num"><b>15 min</b></td><td class="num"><span class="mxn">65,900–90,200</span><span class="usd">$3,800–5,200</span></td><td>Playa Juanillo y gran servicio; albercas sin climatizar</td></tr>
-<tr data-f="lujo"><td>17</td><td><b>Hyatt Zilara Cap Cana</b></td><td>Hyatt Inclusive</td><td>Cap Cana / Juanillo</td><td><b>4.9</b> · 9,506 · <b>#1/11</b></td><td><span class="score s9">9</span></td><td class="num"><b>15 min</b></td><td class="num"><span class="mxn">76,300–104,100</span><span class="usd">$4,400–6,000</span></td><td>La mejor nota del país y 15 min de PUJ; el más caro y sin albercas climatizadas</td></tr>
-<tr data-f="valor"><td>18</td><td>Live Aqua Punta Cana</td><td>Posadas</td><td>Uvero Alto</td><td>4.7 · 6,257 · #3/9</td><td><span class="score s5">5</span></td><td class="num">40-45 min</td><td class="num"><span class="mxn">52,100–65,900</span><span class="usd">$3,000–3,800</span></td><td>Moderno y compacto; playa de resaca y zona aislada</td></tr>
-<tr data-f="valor"><td>19</td><td>Serenade All Suites</td><td>Independiente</td><td>Cabeza de Toro</td><td>4.5 · 1,315 (muestra corta)</td><td><span class="score sx">s/d</span></td><td class="num">20 min</td><td class="num"><span class="mxn">33,000–43,400</span><span class="usd">$1,900–2,500</span></td><td>Barato y cerca; fallos de mantenimiento reportados</td></tr>
-<tr data-f="valor"><td>20</td><td>Punta Cana Princess</td><td>Princess</td><td>Bávaro</td><td>4.3 · 9,302 · #22/56</td><td><span class="score s7">7</span></td><td class="num">25 min</td><td class="num"><span class="mxn">26,000–36,400</span><span class="usd">$1,500–2,100</span></td><td>El más barato del censo con nota aceptable; producto básico</td></tr>
-<tr data-f="fiesta"><td>21</td><td>Royalton CHIC Punta Cana</td><td>Royalton / Marriott</td><td>Uvero Alto</td><td>4.4 · 14,802 · #7/9</td><td><span class="score s5">5</span></td><td class="num">40-50 min</td><td class="num"><span class="mxn">30,300–39,900</span><span class="usd">$1,750–2,300</span></td><td>Alternativa fiestera barata; producto por debajo de Breathless</td></tr>
-<tr data-f="seccion"><td>22</td><td>Bahia Principe Escape Ambar</td><td>Bahia Principe</td><td>Bávaro</td><td>4.3 · 14,495 · #69/170</td><td><span class="score s7">7</span></td><td class="num">30 min</td><td class="num"><span class="mxn">34,700–48,600</span><span class="usd">$2,000–2,800</span></td><td>Habitaciones enormes, pero ambiente 18-30 ruidoso y comida criticada</td></tr>
-<tr data-f="valor"><td>23</td><td>Catalonia Royal Bávaro</td><td>Catalonia</td><td>Cabeza de Toro</td><td>4.2 · 10,118</td><td><span class="score s6">6.5</span></td><td class="num">20 min</td><td class="num"><span class="mxn">27,800–36,400</span><span class="usd">$1,600–2,100</span></td><td>Bajo el listón de 4.3; habitaciones dated</td></tr>
-<tr data-f="desc"><td>24</td><td>Riu Palace Macao <span class="tag warn">Ojo</span></td><td>RIU</td><td>Arena Gorda</td><td>4.2 · 6,929 · #62/169</td><td><span class="score s7">7</span></td><td class="num">25 min</td><td class="num"><span class="mxn">38,200–52,100</span><span class="usd">$2,200–3,000</span></td><td>Renovado 2023 pero con quejas de humedad, moho y olor a drenaje</td></tr>
-<tr data-f="desc lujo"><td>25</td><td>W Punta Cana <span class="tag no">Descartado</span></td><td>Marriott</td><td>Uvero Alto</td><td>4.3 · 257 (abrió 2025)</td><td><span class="score s5">5</span></td><td class="num">45 min</td><td class="num"><span class="mxn">69,400–97,200</span><span class="usd">$4,000–5,600</span></td><td>Diseño espectacular, operación caótica: albercas frías, esperas de 1.5 h</td></tr>
-<tr data-f="desc fiesta"><td>26</td><td>Riu República <span class="tag no">Descartado</span></td><td>RIU</td><td>Arena Gorda</td><td>3.9 · 11,198 · #91/169</td><td><span class="score s6">6</span></td><td class="num">25-40 min</td><td class="num"><span class="mxn">27,800–36,400</span><span class="usd">$1,600–2,100</span></td><td>Moho, albercas turbias y público 18-25; muy por debajo del listón</td></tr>
-</tbody></table></div>
-<p class="small">También en el radar: <b>Hyatt Vivid Punta Cana</b> (abre el 30 de agosto de 2026 en Cabeza de Toro, 18+, a 5 millas de Downtown Punta Cana) — sería el mejor ubicado del censo, pero llegaría con apenas 4 meses de rodaje. Y <b>Margaritaville Island Reserve Cap Cana "Hammock"</b> (18+ estricto, 268 habitaciones, 8.4/10 en Expedia), con poca masa de reseñas todavía.</p>
+<section id="adultos">
+<span class="kicker">02 · Solo adultos</span>
+<h2>Los 12 solo adultos, con precios por habitación</h2>
+<p class="lead">Ordenados de más barato a más caro por su categoría base. Incluye hoteles solo-adultos puros y secciones 18+ dentro de complejos familiares (Majestic, Paradisus).</p>
+<div id="pcAdultos"></div>
+</section>
+
+<section id="familiar">
+<span class="kicker">03 · Con niños</span>
+<h2>Los 6 mejores familiares</h2>
+<p class="lead">Precios para <b>2 adultos y 2 niños</b>. Seleccionados por reputación (TripAdvisor 4.3+) y relación calidad-precio, con el detalle de kids club, parques acuáticos y suites familiares.</p>
+<div class="card note"><b>Antes de comparar:</b> cada cadena calcula distinto la tarifa del tercer y cuarto ocupante menor de edad — gratis, 50%, o tarifa plana por rango de edad — y ahí es donde más varía el total real. Pregúntenlo explícitamente. Además, el 31 de diciembre casi todos cobran <b>cena de gala</b> (USD 80-200 por adulto, la mitad por niño) que normalmente no viene en la tarifa.</div>
+<div id="pcFamiliar"></div>
 </section>
 
 <section id="playas">
-<span class="kicker">03 · El mar</span>
+<span class="kicker">04 · El mar</span>
 <h2>Playas: dónde sí se nada</h2>
-<p class="lead">Diciembre y enero son la mejor ventana del año: el sargazo está en mínimo anual en toda la costa dominicana. Lo que separa a las zonas es el oleaje.</p>
+<p class="lead">Diciembre y enero son la mejor ventana del año: el sargazo está en su mínimo anual en toda la costa dominicana. Lo que separa a las zonas es el oleaje.</p>
 <div class="grid2">
-<div class="card win"><h3 style="margin-top:0">🥇 Juanillo, Cap Cana · <span class="score s9">9</span></h3>La más calmada y segura del país: agua plana tipo piscina, profundidad de pecho, sin corrientes. Arena "polvo de talco", comunidad cerrada sin vendedores. Peros: demasiado somera para nadar largos, coral suelto en algunos accesos (lleven escarpines) y cala corta para caminar. En temporada alta, palapas apartadas desde las 7 AM. Es la playa de Secrets Cap Cana y Hyatt Zilara.</div>
-<div class="card win"><h3 style="margin-top:0">🥈 Bávaro sur — complejo Barceló · <span class="score s9">9</span></h3>"Piscina natural" tras el arrecife lejano: calmada, sin olas, agua tan clara que se ven los peces. Bandera Azul, arena blanca, tumbonas bajo palmeras y 19 km caminables hacia el norte. Es la única que combina baño calmado + profundidad real + caminatas ilimitadas. Contra: es la playa famosa, con movimiento y deportes náuticos, y en fechas altas se llena temprano.</div>
-<div class="card"><h3 style="margin-top:0">Bávaro centro y Arena Gorda · <span class="score s8">8–8.5</span></h3>Mismo arrecife protector, nadable a diario con algo de ola en días de viento. La de <b>Majestic</b> (Colonial y Mirage) se peina antes del amanecer y tiene zonas privadas con camas balinesas. La de <b>Secrets Royal Beach</b> es de las anchas (90 m) y la más palmeada. La de <b>JOIA</b> es privada y despoblada, con Bandera Azul y limpieza con tractores antes de las 7 am. La de <b>TRS Turquesa</b> es bonita pero estrecha en tramos, con pocos camastros y vendedores insistentes.</div>
-<div class="card alert"><h3 style="margin-top:0">Uvero Alto · <span class="score s5">5–5.5</span> — Breathless, Excellence, Live Aqua, Royalton CHIC</h3>El arrecife está pegado a la orilla: resaca fuerte y banderas rojas frecuentes justo en los meses de invierno (Excellence registró un ahogamiento en 2023). Preciosas para pasear al amanecer; para nadar, lotería. Regla universal en toda la costa: respeten las banderas y jamás naden de noche.</div>
+<div class="card win"><h3 style="margin-top:0">🥇 Juanillo, Cap Cana · 9/10</h3>La más calmada y segura del país: agua plana tipo piscina, profundidad de pecho, sin corrientes. Arena polvo de talco y comunidad cerrada sin vendedores. Peros: demasiado somera para nadar largos y coral suelto en algunos accesos (escarpines). Es la playa de Secrets Cap Cana y Hyatt Zilara.</div>
+<div class="card win"><h3 style="margin-top:0">🥈 Bávaro sur, complejo Barceló · 9/10</h3>"Piscina natural" tras el arrecife lejano: calmada, sin olas, agua tan clara que se ven los peces. Bandera Azul, arena blanca y 19 km caminables hacia el norte. La única que combina baño calmado, profundidad real y caminatas ilimitadas.</div>
+<div class="card"><h3 style="margin-top:0">Bávaro centro y Arena Gorda · 8 a 8.5/10</h3>Mismo arrecife protector, nadable a diario con algo de ola en días de viento. La de <b>Majestic</b> se peina antes del amanecer y tiene zonas privadas con camas balinesas. La de <b>Secrets Royal Beach</b> es de las anchas (90 m) y la más palmeada. La de <b>JOIA</b> es privada y despoblada, con Bandera Azul. La de <b>TRS Turquesa</b> es bonita pero estrecha en tramos.</div>
+<div class="card alert"><h3 style="margin-top:0">Uvero Alto · 5 a 5.5/10</h3>Breathless, Excellence, Live Aqua, Dreams Onyx y Ocean El Faro. El arrecife está pegado a la orilla: resaca fuerte y banderas rojas frecuentes justo en los meses de invierno. Preciosas para pasear al amanecer; para nadar, lotería. Regla universal: respeten las banderas y jamás naden de noche.</div>
 </div>
 </section>
 
 <section id="acceso">
-<span class="kicker">04 · Logística</span>
-<h2>Traslados desde el aeropuerto PUJ</h2>
+<span class="kicker">05 · Logística</span>
+<h2>Traslados y vuelos</h2>
 <div class="tblwrap"><table>
-<thead><tr><th>Hotel / zona</th><th class="num">Km</th><th class="num">Minutos</th><th class="num">Privado ida (2 pax)</th><th>Notas</th></tr></thead>
+<thead><tr><th>Hotel / zona</th><th class="num">Minutos desde PUJ</th><th class="num">Privado ida (2 pax)</th><th>Notas</th></tr></thead>
 <tbody>
-<tr><td>TRS Cap Cana Waterfront</td><td class="num">~7</td><td class="num">15</td><td class="num">$30-40</td><td>El más cercano del censo; marina caminando</td></tr>
-<tr><td>Secrets / Zilara Cap Cana</td><td class="num">~13-14</td><td class="num">15-25</td><td class="num">$30-45</td><td>Comunidad cerrada: nada caminable fuera</td></tr>
-<tr><td>Serenade · Catalonia Royal Bávaro</td><td class="num">~12-15</td><td class="num">15-25</td><td class="num">$30-40</td><td>Cabeza de Toro</td></tr>
-<tr><td>Paradisus Palma Real · Meliá PC Beach</td><td class="num">~16-17</td><td class="num">20-25</td><td class="num">$31</td><td>Palma Real Shopping Village caminando</td></tr>
-<tr><td><b>Barceló Bávaro Beach · TRS Turquesa · Secrets Royal Beach</b></td><td class="num">~15-18</td><td class="num">25-30</td><td class="num">~$40</td><td>El corredor céntrico: El Cortecito y Los Corales a pie o a 5 min en taxi</td></tr>
-<tr><td>Majestic Colonial / Mirage · JOIA Bávaro</td><td class="num">~25</td><td class="num">25-35</td><td class="num">$40 · JOIA gratis 3+ noches directo</td><td>Arena Gorda: fila de resorts, sin civilización caminando</td></tr>
-<tr><td>Breathless · Live Aqua · Royalton CHIC</td><td class="num">~40-41</td><td class="num">40-50</td><td class="num">$50-70</td><td>Uvero Alto: tramo final rural y oscuro de noche</td></tr>
-<tr><td>Excellence Punta Cana / El Carmen · W · Secrets Tides</td><td class="num">~44</td><td class="num">45-55</td><td class="num">$55</td><td>Lo más lejano; casi 2 h de carretera ida y vuelta</td></tr>
+<tr><td>Secrets y Hyatt Zilara Cap Cana</td><td class="num">15-25</td><td class="num">$30-45</td><td>Lo más cercano; comunidad cerrada, nada caminable fuera</td></tr>
+<tr><td>Paradisus Palma Real · Meliá Punta Cana Beach</td><td class="num">20-25</td><td class="num">$31</td><td>Palma Real Shopping Village caminando</td></tr>
+<tr><td><b>Barceló Bávaro Beach · TRS Turquesa · Secrets Royal Beach</b></td><td class="num">25-30</td><td class="num">~$40</td><td>El corredor céntrico: El Cortecito y Los Corales a pie o a 5 min en taxi</td></tr>
+<tr><td>Majestic Colonial / Mirage / Elegance · JOIA Bávaro</td><td class="num">25-35</td><td class="num">$40 · JOIA gratis con 3+ noches directo</td><td>Arena Gorda: fila de resorts, sin civilización caminando</td></tr>
+<tr><td>Hard Rock Punta Cana</td><td class="num">30-35</td><td class="num">$40-50</td><td>Playa Macao</td></tr>
+<tr><td>Breathless · Dreams Onyx · Ocean El Faro · Nickelodeon</td><td class="num">45-55</td><td class="num">$50-70</td><td>Uvero Alto: tramo final rural y oscuro de noche</td></tr>
+<tr><td>Excellence Punta Cana y El Carmen</td><td class="num">45-55</td><td class="num">$55</td><td>Lo más lejano; casi 2 h de carretera ida y vuelta</td></tr>
 </tbody></table></div>
 <div class="grid2">
-<div class="card"><h3 style="margin-top:0">Uber y taxis (2025-26)</h3>Uber sí opera y funciona bien dentro de Bávaro ($6-8 los viajes cortos; Bávaro→Cap Cana $15-25). En el aeropuerto funciona pero con fricción (cancelaciones y esperas por presión del sindicato de taxis); en Cap Cana es inconsistente dentro de las puertas y en Uvero Alto casi no hay cobertura. Los taxis oficiales van con tarifa fija de sindicato y solo efectivo (Bávaro $30-50, Uvero Alto $60-80). Para dos personas, el <b>traslado privado prereservado ($30-55)</b> cuesta lo mismo que el taxi y te espera con cartel: es la opción dominante.</div>
-<div class="card"><h3 style="margin-top:0">Vuelos y trámites desde México</h3>Directo CDMX→PUJ con Aeroméxico (AICM, diario) y Arajet (desde AIFA), ~4 h 50 m; Copa con escala en Panamá. Presupuesten <b>USD 450-700 por persona</b> en directo para estas fechas comprando ya. Requisitos: <b>sin visa</b>, pero sí <b>pasaporte con 6+ meses de vigencia</b> y el <b>e-ticket migratorio gratuito</b> (eticket.migracion.gob.do), uno de entrada y otro de salida, llenado antes del check-in.</div>
+<div class="card"><h3 style="margin-top:0">Vuelos y trámites desde México</h3>Directo CDMX→PUJ con Aeroméxico (AICM, diario) y Arajet (desde AIFA), unas 4 h 50 m; Copa con escala en Panamá. Presupuesten <b>USD 450-700 por persona</b> en directo comprando ya. Requisitos: sin visa, pero sí <b>pasaporte con 6+ meses de vigencia</b> y el <b>e-ticket migratorio gratuito</b> (eticket.migracion.gob.do), uno de entrada y otro de salida, llenado antes del check-in.</div>
+<div class="card"><h3 style="margin-top:0">Uber y taxis (2025-26)</h3>Uber opera y funciona bien dentro de Bávaro ($6-8 los viajes cortos). En el aeropuerto funciona pero con fricción; en Cap Cana es inconsistente dentro de las puertas y en Uvero Alto casi no hay cobertura. Los taxis oficiales van con tarifa fija de sindicato y solo efectivo. Para dos personas, el <b>traslado privado prereservado ($30-55)</b> cuesta lo mismo que el taxi y te espera con cartel.</div>
 </div>
-</section>
-
-<section id="hoteles">
-<span class="kicker">05 · A fondo</span>
-<h2>Los cinco finalistas</h2>
-
-<div class="hcard">
-<h3>1 · Secrets Royal Beach Punta Cana <span class="tag best">Mejor equilibrio</span></h3>
-<div class="meta">Hyatt Inclusive · Bávaro / Los Corales · 639 habitaciones · TA 4.6 (23,532) · <span class="mxn">MXN 43,400–55,500</span><span class="usd">USD 2,500–3,200</span></div>
-<div class="facts">
-<div class="fact"><b>Playa · 8.5/10</b>90 m de ancho, la más palmeada de Bávaro; sargazo estacional bajo en diciembre.</div>
-<div class="fact"><b>Céntrico</b>10-15 min caminando a Los Corales y El Cortecito: bares, restaurantes y tiendas sin taxi.</div>
-<div class="fact"><b>Albercas</b>Infinity de dos niveles en Preferred Club + río lento.</div>
-<div class="fact"><b>Comida</b>5 à la carte <b>sin reserva</b> — clave en fechas llenas. El buffet es el punto flojo.</div>
-</div>
-<p>Reconstruido en 2020, sin obras anunciadas. La crítica más repetida es que la zona no-Preferred se siente más vieja que la Preferred, así que vale la pena comparar el diferencial de precio del upgrade antes de decidir.</p>
-</div>
-
-<div class="hcard">
-<h3>2 · Majestic Colonial — Colonial Club <span class="tag new">Nuevo en el análisis</span></h3>
-<div class="meta">Majestic Resorts · Arena Gorda · sección 18+ real · TA 4.5 (26,388) · #2 de 56 en Bávaro · <span class="mxn">MXN 29,500–38,200</span><span class="usd">USD 1,700–2,200</span></div>
-<div class="facts">
-<div class="fact"><b>La sección</b>Alberca privada, playa reservada con camas balinesas, restaurantes exclusivos de desayuno y comida, check-in privado, mayordomo.</div>
-<div class="fact"><b>Playa · 8.5/10</b>Arena Gorda peinada antes del amanecer; sargazo ocasional.</div>
-<div class="fact"><b>Comida</b>Matsuri (teppanyaki) y Tres Carabelas (mariscos) muy elogiados; el restaurante de playa citado como lo mejor.</div>
-<div class="fact"><b>El pero</b>La alberca del Club es la más modesta de la familia Majestic, y no hay nada caminando.</div>
-</div>
-<blockquote>"El upgrade al lado solo-adultos y el servicio de concierge definitivamente valió el costo" — reseña 2025-26</blockquote>
-<p>Es la mejor relación reputación/precio de todo el censo dominicano: por lo mismo que cuesta el Barceló Bávaro Beach, obtienes el hotel #2 de Bávaro con una sección 18+ que aísla de verdad.</p>
-</div>
-
-<div class="hcard">
-<h3>3 · TRS Turquesa (Grand Palladium) <span class="tag ok">El más céntrico</span></h3>
-<div class="meta">Palladium Hotel Group · Bávaro / El Cortecito · 372 suites · TA 4.5 (20,636) · <span class="mxn">MXN 36,400–46,800</span><span class="usd">USD 2,100–2,700</span></div>
-<div class="facts">
-<div class="fact"><b>Céntrico · 9/10</b>Walkability 87/100: 29 restaurantes a menos de 500 m y El Cortecito al lado.</div>
-<div class="fact"><b>Comida</b>40+ restaurantes y bares del complejo incluidos; La Bohème (francés), Kusko (nikkei), Helios beach club.</div>
-<div class="fact"><b>Albercas</b>Swim-up bar propio + 6 albercas del complejo + "The Secret", alberca nocturna solo adultos.</div>
-<div class="fact"><b>Fiesta + relax</b>Burbuja tranquila de parejas, con teatro, casino, disco y White Party del complejo a 5-10 min a pie.</div>
-</div>
-<p><b>El riesgo a asumir:</b> reseñas de 2025 reportan habitaciones "tired and worn", fugas y aire acondicionado ruidoso, y el servicio es polarizado en horas pico. Pidan habitación renovada o piso alto al reservar.</p>
-</div>
-
-<div class="hcard">
-<h3>4 · Majestic Mirage — Mirage Club <span class="tag new">Nuevo en el análisis</span></h3>
-<div class="meta">Majestic Resorts · Arena Gorda · sección 18+ con acceso restringido · TA 4.7 (16,719) · #7 de 170 en Punta Cana · <span class="mxn">MXN 39,000–55,500</span><span class="usd">USD 2,250–3,200</span></div>
-<div class="facts">
-<div class="fact"><b>La sección</b>8 albercas privadas, playa privada, check-in VIP en lobby propio, 2 rooftop lounges frente al mar, mayordomo 24 h.</div>
-<div class="fact"><b>Aislamiento real</b>Sección con acceso propio; la web es explícita: edad mínima 18 años para acceder o reservar.</div>
-<div class="fact"><b>Reputación</b>La mejor del censo entre las secciones: #7 de 170 hoteles de todo Punta Cana.</div>
-<div class="fact"><b>El pero</b>"No puedes pedir comida en la playa ni en la alberca" (queja textual 2026) y room service mediocre.</div>
-</div>
-</div>
-
-<div class="hcard">
-<h3>5 · JOIA Bávaro by Iberostar <span class="tag ok">Mejor comida</span></h3>
-<div class="meta">Iberostar · Arena Gorda · 273 habitaciones · TA 4.8 · #1 de 56 en Bávaro · Best of the Best 2026 · <span class="mxn">MXN 55,500–72,900</span><span class="usd">USD 3,200–4,200</span></div>
-<div class="facts">
-<div class="fact"><b>Comida · 8.5/10</b>Le Tourbillon (alta cocina francesa), El Galeón (surf & turf), Hashira (japonés); carta de vinos incluidos de las más extensas del Caribe.</div>
-<div class="fact"><b>Albercas · 8.5/10</b>3 albercas con roles separados y <b>las 2 principales climatizadas</b> — dato confirmado por reseña de invierno. Bar sumergido Larimar.</div>
-<div class="fact"><b>Playa · 8/10</b>Privada y despoblada, Bandera Azul, limpieza con tractores antes de las 7 am.</div>
-<div class="fact"><b>Traslado</b>Gratis reservando 3+ noches directo con Iberostar.</div>
-</div>
-<p><b>En contra:</b> es un enclave sin nada caminando (el primer restaurante externo está a 2 km), las habitaciones se sienten algo datadas y varias reseñas lo describen como "just a bit too quiet" — si buscan ambiente, no es este.</p>
-</div>
-</section>
-
-<section id="precios">
-<span class="kicker">06 · Dinero</span>
-<h2>Precios y presupuesto</h2>
-<div class="card note"><b>Metodología.</b> Los motores de reserva no permiten cotización automatizada con fechas exactas, así que cada rango combina el rango real de tarifas publicado por TripAdvisor y Kayak para cada hotel con el recargo festivo documentado por la misma fuente (de +15% a +62% según propiedad). Marcado como <b>estimación</b>: verifica el precio final antes de pagar. Para Nochevieja se recomienda reservar con 8-9 meses de antelación y ya van 5.</div>
-<div class="tblwrap"><table>
-<thead><tr><th>Escenario</th><th>Hotel</th><th class="num">Hotel 4 noches</th><th class="num">+ vuelos 2 pax</th><th class="num">Viaje completo aprox.</th></tr></thead>
-<tbody>
-<tr><td>A · Ahorro</td><td>Punta Cana Princess</td><td class="num"><span class="mxn">26,000–36,400</span><span class="usd">$1,500–2,100</span></td><td class="num"><span class="mxn">15,600–24,300</span><span class="usd">$900–1,400</span></td><td class="num"><span class="mxn">43,000–62,000</span><span class="usd">$2,480–3,570</span></td></tr>
-<tr><td>B · Mejor valor <span class="tag best">Recomendado</span></td><td>Majestic Colonial · Colonial Club</td><td class="num"><span class="mxn">29,500–38,200</span><span class="usd">$1,700–2,200</span></td><td class="num"><span class="mxn">15,600–24,300</span><span class="usd">$900–1,400</span></td><td class="num"><span class="mxn">47,000–64,000</span><span class="usd">$2,700–3,690</span></td></tr>
-<tr><td>C · Céntrico</td><td>TRS Turquesa</td><td class="num"><span class="mxn">36,400–46,800</span><span class="usd">$2,100–2,700</span></td><td class="num"><span class="mxn">15,600–24,300</span><span class="usd">$900–1,400</span></td><td class="num"><span class="mxn">54,000–73,000</span><span class="usd">$3,110–4,210</span></td></tr>
-<tr><td>D · Equilibrio</td><td>Secrets Royal Beach</td><td class="num"><span class="mxn">43,400–55,500</span><span class="usd">$2,500–3,200</span></td><td class="num"><span class="mxn">15,600–24,300</span><span class="usd">$900–1,400</span></td><td class="num"><span class="mxn">61,000–81,000</span><span class="usd">$3,520–4,670</span></td></tr>
-<tr><td>E · Comida y calidad</td><td>JOIA Bávaro</td><td class="num"><span class="mxn">55,500–72,900</span><span class="usd">$3,200–4,200</span></td><td class="num"><span class="mxn">15,600–24,300</span><span class="usd">$900–1,400</span></td><td class="num"><span class="mxn">73,000–99,000</span><span class="usd">$4,210–5,710</span></td></tr>
-<tr><td>F · Lujo</td><td>Hyatt Zilara Cap Cana</td><td class="num"><span class="mxn">76,300–104,100</span><span class="usd">$4,400–6,000</span></td><td class="num"><span class="mxn">15,600–24,300</span><span class="usd">$900–1,400</span></td><td class="num"><span class="mxn">94,000–130,000</span><span class="usd">$5,420–7,490</span></td></tr>
-</tbody></table></div>
-<p class="small">Viaje completo = hotel + vuelos redondos para 2 personas + traslados (~<span class="mxn">MXN 1,400</span><span class="usd">USD 80</span>). No incluye propinas, excursiones ni extras.</p>
-</section>
-
-<section id="videos">
-<span class="kicker">07 · Para ver</span>
-<h2>Videoteca verificada</h2>
-<p class="lead">Enlaces confirmados uno por uno contra la API oficial de YouTube. Clic en cualquier tarjeta para abrir el video.</p>
-<div class="vtabs" id="vtabs">
-<button class="act" data-cat="all">Todos</button>
-<button data-cat="comp">Comparativas</button>
-<button data-cat="hotel">Por hotel</button>
-</div>
-<div class="vgridd" id="vgrid"></div>
-</section>
-
-<section id="cobertura">
-<span class="kicker">08 · Transparencia</span>
-<h2>Cobertura: qué se revisó y qué no calificó</h2>
-<div class="tblwrap"><table>
-<thead><tr><th>Hotel / marca</th><th>Motivo de exclusión</th></tr></thead>
-<tbody>
-<tr><td><b>Lopesan Costa Bávaro</b></td><td>Familiar con kids club. Su "Adults Only Club" tiene reseñas tituladas "¡Adults Only no significa Adults Only!": familias registrándose en el check-in de la zona y niños en el área. TA 3.8 con 29 reseñas. <b>Corrección de ediciones anteriores</b></td></tr>
-<tr><td><b>Grand Sirenis Punta Cana</b></td><td>Familiar con parque acuático Aquagames. <b>Corrección de ediciones anteriores</b></td></tr>
-<tr><td>Hard Rock Punta Cana</td><td>Familiar (Roxity Kids Club y parque acuático). "Rock Royalty" es nivel VIP sin restricción de edad</td></tr>
-<tr><td>Iberostar Selection Bávaro "Star Prestige"</td><td>Nivel VIP sin restricción de edad: hay reseñas de huéspedes alojados ahí con hijos de 3 y 7 años</td></tr>
-<tr><td>Grand Bávaro Princess "Platinum" · Ocean Blue & Sand "Privilege"</td><td>Paquetes de servicio VIP, sin límite de edad ni alberca exclusiva 18+</td></tr>
-<tr><td>Zoëtry Agua Punta Cana</td><td>Su propia web dice "adult-oriented, but children are permitted"</td></tr>
-<tr><td>Barceló Bávaro Palace · Riu Palace Bávaro y Punta Cana · Riu Bambu · Riu Naiboa · Meliá Caribe · Iberostar Selection · Bahia Principe Grand · Catalonia Bávaro · Ocean El Faro · Dreams (toda la marca) · Nickelodeon · Falcon's · Impressive · Vista Sol · Club Med Michès</td><td>Familiares con kids club</td></tr>
-<tr><td>Eden Roc Cap Cana · Casa de Campo · Westin y Tortuga Bay</td><td>No son todo incluido (plan europeo o AI opcional)</td></tr>
-<tr><td>El Beso @ Ocean El Faro</td><td>Sección 18+ real, pero TA 3.7 y playa rocosa</td></tr>
-<tr><td>Secrets La Romana · Secrets Playa Esmeralda · Bahia Principe Samaná · Catalonia Royal La Romana</td><td>Solo adultos, pero fuera de la zona de Punta Cana (Bayahíbe, Miches, Samaná)</td></tr>
-</tbody></table></div>
 </section>
 
 <section id="checklist">
-<span class="kicker">09 · Antes de pagar</span>
+<span class="kicker">06 · Antes de pagar</span>
 <h2>Checklist</h2>
 <div class="card">
 <ul class="check">
-<li><b>Reservar ya:</b> la ventana recomendada para estas fechas es de 8-9 meses y quedan 5; las categorías baratas se agotan primero.</li>
-<li><b>Cotizar directo Y en una OTA:</b> en pruebas anteriores la web oficial de Barceló salió 16% más barata que Booking. Registrarse en el programa de la cadena (myBarcelo, Iberostar, Majestic) suele dar 5-15% extra.</li>
-<li><b>En las secciones 18+</b> (Colonial Club, Mirage Club, The Reserve): confirmar por escrito que la restricción aplica a alberca, playa <b>y</b> restaurantes, y que 4 noches califican para los beneficios de club.</li>
-<li><b>En TRS Turquesa:</b> pedir habitación renovada o piso alto — el desgaste está documentado en reseñas 2025.</li>
+<li><b>Confirmar la estancia mínima:</b> muchos resorts piden 5-7 noches en Nochevieja y el viaje es de 4. Es lo primero que hay que preguntar.</li>
+<li><b>Preguntar por el suplemento de la cena de gala del 31</b> (USD 80-200 por persona), que casi nunca viene en la tarifa publicada.</li>
+<li><b>Cotizar directo Y en una OTA:</b> en pruebas anteriores la web oficial de Barceló salió 16% más barata que Booking. Registrarse en el programa de la cadena (myBarcelo, Iberostar, Majestic, Palladium) suele dar 5-15% extra.</li>
+<li><b>En las secciones 18+</b> (Colonial Club, Mirage Club, The Reserve): confirmar por escrito que la restricción aplica a alberca, playa <b>y</b> restaurantes.</li>
+<li><b>En TRS Turquesa:</b> pedir habitación renovada o piso alto — el desgaste está documentado en reseñas de 2025.</li>
 <li><b>Si van a Cap Cana:</b> preguntar si las albercas estarán climatizadas; hay quejas documentadas de agua fría en enero.</li>
-<li><b>Llenar el e-ticket migratorio</b> (gratis, eticket.migracion.gob.do) antes del check-in, uno de entrada y otro de salida, y verificar pasaportes con 6+ meses de vigencia.</li>
-<li><b>Prereservar traslado privado</b> ($30-55 según zona): mismo precio que el taxi, sin fricción. JOIA lo regala reservando directo 3+ noches.</li>
-<li><b>Al llegar:</b> apartar los à la carte con el concierge el mismo día; en resorts grandes, pedir edificio céntrico.</li>
-<li><b>En la playa:</b> respetar las banderas (sobre todo en Uvero Alto) y no nadar de noche.</li>
+<li><b>Llenar el e-ticket migratorio</b> (gratis, eticket.migracion.gob.do) antes del check-in y verificar pasaportes con 6+ meses de vigencia.</li>
+<li><b>Prereservar traslado privado</b> ($30-55 según zona). JOIA lo regala reservando directo 3+ noches.</li>
+<li><b>Al llegar:</b> apartar los à la carte con el concierge el mismo día; en resorts de 1,800+ habitaciones, esperar al segundo día significa comer buffet toda la semana.</li>
 </ul>
 </div>
 </section>
 
 <section id="cierre">
-<span class="kicker">10 · Cierre</span>
-<h2>Conclusión</h2>
-<p>Punta Cana sigue teniendo las mejores playas del estudio y una oferta solo-adultos enorme, pero su handicap para una pareja mexicana es el vuelo: unos <span class="mxn">MXN 10 mil</span><span class="usd">USD 580</span> más que volar a Cancún, más pasaporte y e-ticket. Si aun así el destino es este, el orden es claro: <b>Majestic Colonial – Colonial Club</b> si mandan precio y reputación, <b>Secrets Royal Beach</b> si quieren el mejor equilibrio con civilización caminando, <b>TRS Turquesa</b> si pesa la variedad gastronómica y salir del hotel a pie, <b>Majestic Mirage</b> si el presupuesto estira para el mejor producto, y <b>JOIA Bávaro</b> si la comida y las albercas climatizadas son la prioridad. La comparación contra el Caribe mexicano está en el <a href="comparador.html">Comparador</a>.</p>
-<p class="small"><b>Fuentes:</b> TripAdvisor (notas, rankings, volumen y reseñas 2025-26), Oyster, Monarc.ca, Punta Cana Travel Blog, All-Inclusive Guide, webs oficiales (barcelo.com, iberostar.com, palladiumhotelgroup.com, majestic-resorts.com, melia.com, hyattinclusivecollection.com, riu.com, princess-hotels.com, cataloniahotels.com), guías de traslados (CJ Transfer, Cana Transfer, punta-cana-airport-transfers.com), prensa del sector (Caribbean Journal, TravelPulse) y videos de YouTube verificados vía oEmbed. Censo y verificación realizados el 1-2 de agosto de 2026. Precios: <b>estimaciones</b> sujetas a cambio y disponibilidad. Documento informativo, no asesoría de compra.</p>
+<span class="kicker">07 · Cierre</span>
+<h2>Fuentes y método</h2>
+<p class="small">Datos recopilados el 1 y 2 de agosto de 2026 con censo por cadena y verificación cruzada. <b>Tipos de habitación, metros cuadrados, ocupación y tarifas "desde"</b>: webs oficiales de cada hotel (majestic-resorts.com, hyattinclusivecollection.com, palladiumhotelgroup.com, barcelo.com, iberostar.com, melia.com, excellenceresorts.com, hyatt.com, oceanhotels.com, hardrock.com, karismahotels.com). <b>Notas, volumen de reseñas y rankings</b>: TripAdvisor, verificados hotel por hotel. <b>Rangos de precio y recargo festivo</b>: Kayak, Momondo y All-Inclusive Guide. <b>Playas, traslados y contexto</b>: Punta Cana Travel Blog, Oyster, Monarc.ca y guías de traslados locales. Las imágenes provienen de los CDN oficiales de cada cadena y fueron verificadas una por una; algunos hoteles cargan su galería por JavaScript y en esos casos se enlaza la galería oficial en lugar de la imagen. <b>Todo precio marcado EST es una estimación</b> — verifícalo en el motor de reservas antes de pagar. Documento informativo, no asesoría de compra. Comparación entre destinos en el <a href="comparador.html">Comparador</a>.</p>
 </section>
 
 </div>
-<footer>Punta Cana solo adultos · Guía costo-beneficio · 2 adultos · 29 dic 2026 → 2 ene 2027 · actualizado el 2 de agosto de 2026 · <a href="mexico.html">Caribe Mexicano</a> · <a href="comparador.html">Comparador</a></footer>
+<footer>Punta Cana · 18 resorts todo incluido con precios por habitación · actualizado el 2 de agosto de 2026 · <a href="mexico.html">Caribe Mexicano</a> · <a href="comparador.html">Comparador</a></footer>
 
+<script src="data.js"></script>
+<script src="app.js"></script>
 <script>
-function setCur(c){
-  document.body.dataset.cur=c;
-  document.getElementById('btnMXN').classList.toggle('act',c==='mxn');
-  document.getElementById('btnUSD').classList.toggle('act',c==='usd');
-}
-document.getElementById('rankFilters').addEventListener('click',e=>{
-  if(e.target.tagName!=='BUTTON')return;
-  [...document.querySelectorAll('#rankFilters button')].forEach(b=>b.classList.remove('act'));
-  e.target.classList.add('act');
-  const f=e.target.dataset.f;
-  document.querySelectorAll('#rankTable tbody tr').forEach(tr=>{
-    tr.classList.toggle('hid', f!=='all' && !(tr.dataset.f||'').split(' ').includes(f));
-  });
-});
-const V=[
- {id:"DtDn8YiviZE",cat:"comp",t:"Me alojo en 14 Resorts Todo Incluido en Punta Cana",c:"Descubriendo Viajes · ES",d:"Estancias reales en 14 resorts; dice con franqueza cuáles decepcionan."},
- {id:"BWR5uIQsSME",cat:"comp",t:"I Stayed at 20 of the BEST RESORTS in Punta Cana",c:"Coolist · EN",d:"4+ noches en cada uno de 20 resorts durante 18 meses; el más riguroso."},
- {id:"IWjSZLgVWog",cat:"comp",t:"Punta Cana 2026: Top 12 Hoteles Todo Incluido",c:"Hoteles de Lujo · ES",d:"Ranking 2026 en español, enfocado a gama alta."},
- {id:"mhG7ZzJJvWw",cat:"comp",t:"El Mejor Hotel Todo Incluido para Cada Necesidad (2025)",c:"Hoteles de Lujo · ES",d:"Mejor por categoría: playa, comida, parejas. Útil para cruzar prioridades."},
- {id:"BGEnG2oRrzA",cat:"comp",t:"Los 5 Resort más exclusivos de 2026 en Punta Cana",c:"Lisy & Fide · ES",d:"Selección de lujo 2026 en español."},
- {id:"e6iDocDp6No",cat:"hotel",t:"JOIA Bávaro by Iberostar Review: Best All-Inclusive on Bávaro Beach (2026)",c:"TripTalesToday · EN",d:"El #1 de Bávaro por dentro, en su edición 2026."},
- {id:"dbYqTSf-vEE",cat:"hotel",t:"Not What We Expected! JOIA Bávaro by Iberostar — Honest Resort Review",c:"Wake Up Here · EN",d:"La cara crítica del JOIA: expectativas y realidad."},
- {id:"FAaLQmwBVpU",cat:"hotel",t:"Barceló Bávaro Beach Review: Adults-Only Luxury Resort in Punta Cana",c:"TripTalesToday · EN",d:"El solo-adultos del complejo Barceló, con su playa 9/10."},
- {id:"Buk9z2DMji0",cat:"hotel",t:"El mejor HOTEL SOLO ADULTOS: Barceló Bávaro Beach Review 4K",c:"Así se viaja · ES",d:"Review en español en 4K de la opción más barata con gran playa."},
- {id:"JrY40Fd6mm0",cat:"hotel",t:"Barcelo Bavaro Beach REVIEW and TOUR 2024 — Adults Only All Inclusive",c:"Miss Ei · EN",d:"Tour equilibrado: habitaciones, playa y el combo con el Palace."},
- {id:"fJ7XadArZrI",cat:"hotel",t:"SECRETS CAP CANA — 'El mejor hotel de República Dominicana'",c:"Hotel Guide · EN",d:"Playa Juanillo y el lujo de Cap Cana al detalle."},
- {id:"RvuNYgRybMw",cat:"hotel",t:"Secrets Cap Cana — Honest Review",c:"Flyer Travels · EN",d:"Segunda opinión del lujo de Juanillo."},
- {id:"XNPxK5EPWok",cat:"hotel",t:"Hyatt Zilara Cap Cana Review — OVERPRICED or Adults Only Heaven?",c:"Travel Dash · EN",d:"El debate exacto: ¿vale lo que cuesta el mejor calificado del país?"},
- {id:"7_E6bG3_3xc",cat:"hotel",t:"Breathless Punta Cana — Full Tour & Review 2026",c:"TravelFinanceAdvisor · EN",d:"El resort-fiesta al detalle: pool parties, DJ y ambiente."},
- {id:"Gc-1JF5F6Nc",cat:"hotel",t:"MELIA PUNTA CANA BEACH — Resort Review 2025",c:"Rate Resort · EN",d:"El wellness de Bávaro con Palma Real caminando."},
- {id:"OIZNamldGok",cat:"hotel",t:"Meliá Punta Cana Beach — grabado en DICIEMBRE",c:"Eugenia Abramson · EN",d:"Útil para ver clima, mar y ambiente en las fechas del viaje."},
-];
-function renderVideos(cat){
-  const g=document.getElementById('vgrid'); g.innerHTML='';
-  V.filter(v=>cat==='all'||v.cat===cat).forEach(v=>{
-    const a=document.createElement('a');
-    a.className='vid'; a.href='https://www.youtube.com/watch?v='+v.id; a.target='_blank'; a.rel='noopener';
-    a.innerHTML='<div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/'+v.id+'/hqdefault.jpg" alt="'+v.t.replace(/"/g,'&quot;')+'" onerror="this.remove()"><div class="play"><i></i></div></div>'
-      +'<div class="b"><p class="c">'+v.c+'</p><p class="t">'+v.t+'</p><p class="d">'+v.d+'</p></div>';
-    g.appendChild(a);
-  });
-}
-document.getElementById('vtabs').addEventListener('click',e=>{
-  if(e.target.tagName!=='BUTTON')return;
-  [...document.querySelectorAll('#vtabs button')].forEach(b=>b.classList.remove('act'));
-  e.target.classList.add('act');
-  renderVideos(e.target.dataset.cat);
-});
-renderVideos('all');
+renderHotels('pcAdultos','pc','adultos');
+renderHotels('pcFamiliar','pc','familiar');
 </script>
 </body></html>

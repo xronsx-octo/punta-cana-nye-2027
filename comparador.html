@@ -109,7 +109,7 @@ body[data-cur="usd"] .mxn{display:none}
 <div class="brand">Viaje <span>dic 26 · ene 27</span></div>
 <div class="dest"><a href="index.html">Punta Cana</a><a href="mexico.html">Caribe Mexicano</a><a class="act" href="comparador.html">★ Comparador</a></div>
 <div class="links">
-<a href="#podio">Podio</a><a href="#mixer">Tu ranking</a><a href="#scorecard">Scorecard</a><a href="#fichas">Fichas</a><a href="#cobertura">Cobertura</a><a href="#trampas">Trampas</a><a href="#metodo">Método</a>
+<a href="#podio">Podio</a><a href="#mixer">Tu ranking</a><a href="#scorecard">Scorecard</a><a href="#fichas">Fichas</a><a href="#familiar">Familiares</a><a href="#cobertura">Cobertura</a><a href="#trampas">Trampas</a><a href="#metodo">Método</a>
 </div>
 <div class="curswitch"><button id="btnMXN" class="act" onclick="setCur('mxn')">MXN</button><button id="btnUSD" onclick="setCur('usd')">USD</button></div>
 </div></nav>
@@ -128,7 +128,7 @@ body[data-cur="usd"] .mxn{display:none}
 
 <div class="wrap">
 
-<div class="card note" style="margin-top:26px"><b>Qué cambió en esta edición.</b> Se rehízo el estudio como <b>censo sistemático marca por marca</b> en vez de una lista incremental, con tres criterios nuevos: se aceptan <b>secciones solo-adultos dentro de complejos familiares</b> (tipo Colonial Club o Altitude), el listón baja a <b>TripAdvisor 4.3</b>, y manda el <b>costo-beneficio</b> — los ultra-lujo solo entran si su relación valor/precio lo justifica. Resultado: entraron <b>27 hoteles que antes no estaban</b>, de cadenas como Majestic, Paradisus, Royal Hideaway (Barceló), Royalton, RIU, Iberostar, Krystal, Privilege, Margaritaville y Hyatt Vivid. Además hubo <b>tres correcciones</b>: Cozumel Palace y Lopesan no son solo adultos, y varias "secciones adults" resultaron ser solo niveles VIP sin restricción de edad (ver <a href="#trampas">Trampas</a>). Los precios de Riviera Maya son <b>cotizaciones reales de Expedia con estas fechas exactas</b>; los demás son estimaciones con recargo festivo documentado. Verifica siempre antes de pagar.</div>
+<div class="card note" style="margin-top:26px"><b>Qué cambió en esta edición.</b> Se rehízo el estudio como <b>censo sistemático marca por marca</b> en vez de una lista incremental, con tres criterios nuevos: se aceptan <b>secciones solo-adultos dentro de complejos familiares</b> (tipo Colonial Club o Altitude), el listón baja a <b>TripAdvisor 4.3</b>, y manda el <b>costo-beneficio</b> — los ultra-lujo solo entran si su relación valor/precio lo justifica. Ahora incluye además <b>opciones familiares</b> y, en las páginas de destino, el <b>desglose de precios por tipo de habitación con fotos y links oficiales</b> de 36 resorts. Resultado: entraron <b>27 hoteles que antes no estaban</b>, de cadenas como Majestic, Paradisus, Royal Hideaway (Barceló), Royalton, RIU, Iberostar, Krystal, Privilege, Margaritaville y Hyatt Vivid. Además hubo <b>tres correcciones</b>: Cozumel Palace y Lopesan no son solo adultos, y varias "secciones adults" resultaron ser solo niveles VIP sin restricción de edad (ver <a href="#trampas">Trampas</a>). Los precios de Riviera Maya son <b>cotizaciones reales de Expedia con estas fechas exactas</b>; los demás son estimaciones con recargo festivo documentado. Verifica siempre antes de pagar.</div>
 
 <section id="podio">
 <span class="kicker">01 · El veredicto</span>
@@ -254,8 +254,19 @@ Es el que <b>no te obliga a elegir</b>: playa propia, 13 restaurantes y bares ad
 </div>
 </section>
 
+<section id="familiar">
+<span class="kicker">05 · Con niños</span>
+<h2>Si el viaje fuera en familia</h2>
+<p class="lead">Los 12 mejores todo incluido familiares de ambos destinos, ordenados por precio. Totales por 4 noches para <b>2 adultos y 2 niños</b>, estimados. El detalle de habitaciones, kids club y fotos está en las páginas de <a href="index.html#familiar">Punta Cana</a> y <a href="mexico.html#familiar">Caribe Mexicano</a>.</p>
+<div class="tblwrap"><table>
+<thead><tr><th>Hotel</th><th>Zona</th><th>TripAdvisor</th><th class="num">4 noches · 2 ad. + 2 niños</th><th>Por qué</th></tr></thead>
+<tbody id="famBody"></tbody>
+</table></div>
+<div class="card note"><b>Lo que más mueve el total real</b> no es la tarifa publicada sino dos cosas: cómo cobra cada cadena al tercer y cuarto ocupante menor de edad (gratis, 50% o tarifa plana por rango de edad), y el suplemento de la cena de gala del 31, que casi nunca viene incluido y ronda USD 80-200 por adulto y la mitad por niño. Pregunten ambas por escrito antes de comparar precios entre hoteles.</div>
+</section>
+
 <section id="cobertura">
-<span class="kicker">05 · Transparencia</span>
+<span class="kicker">06 · Transparencia</span>
 <h2>Cobertura: qué se revisó y qué quedó fuera</h2>
 <p class="lead">Este es el censo completo por cadena. Si una marca famosa no aparece en el ranking, aquí está la razón exacta.</p>
 <h3>Cadenas revisadas con producto solo-adultos que SÍ entró</h3>
@@ -297,7 +308,7 @@ Es el que <b>no te obliga a elegir</b>: playa propia, 13 restaurantes y bares ad
 </section>
 
 <section id="trampas">
-<span class="kicker">06 · Cuidado</span>
+<span class="kicker">07 · Cuidado</span>
 <h2>Las "secciones solo adultos" que son puro marketing</h2>
 <p class="lead">De ~25 secciones censadas, solo 9 restringen de verdad el acceso por edad. Estas cuatro cobran precio de solo-adultos sin serlo, con evidencia de reseñas:</p>
 <div class="grid2">
@@ -310,7 +321,7 @@ Es el que <b>no te obliga a elegir</b>: playa propia, 13 restaurantes y bares ad
 </section>
 
 <section id="metodo">
-<span class="kicker">07 · Cierre</span>
+<span class="kicker">08 · Cierre</span>
 <h2>Método y lectura final</h2>
 <p>Con costo-beneficio al frente, la conclusión se mueve de destino. <b>El Caribe mexicano gana</b>, y no por poco: el vuelo nacional (2 h 20 m, sin pasaporte ni trámites) cuesta la mitad que volar a Punta Cana, y ese ahorro de unos <span class="mxn">MXN 10 mil</span><span class="usd">USD 580</span> equivale a subir dos categorías de hotel. Los tres primeros lugares son mexicanos y están separados por 0.17 puntos: <b>Royalton CHIC</b> gana por sumar precio + llegada + centricidad + fiesta sin ceder en ninguno; <b>Privilege Aluxes</b> empata en valor y añade la mejor playa nadable del estudio; <b>Hyatt Vivid</b> es el que menos concesiones pide si el presupuesto estira. Detrás vienen Riu Palace Las Américas (la ubicación más céntrica de la Zona Hotelera) y, ya en Punta Cana, Secrets Royal Beach.</p>
 <p>Cuatro matices que el ranking no dice en voz alta. Uno: <b>Royal Hideaway Playacar es imbatible en precio</b> (<span class="mxn">MXN 29,800</span><span class="usd">USD 1,716</span> reales) y solo pierde por no tener swim-up bar ni vida nocturna — si esos dos criterios les dan igual, es la compra. Dos: <b>Excellence Riviera Cancún</b> tiene la validación estadística más fuerte del censo (#1 de 44 en Puerto Morelos con 4.7 y 27,638 reseñas) y 6 albercas con lazy river a 25 min del aeropuerto; cae al 14 solo por ser un enclave sin nada caminando. Tres: <b>Krystal Grand Altitude</b> ofrece la centricidad más alta de todo el estudio, pero su "solo adultos" se reduce a una alberca y un restaurante. Y cuatro: <b>Cozumel queda descartado como sede</b> — su único solo-adultos está en 3.7 y en declive; la isla brilla como excursión de buceo, no como base.</p>
@@ -327,6 +338,7 @@ function setCur(c){
   document.getElementById('btnMXN').classList.toggle('act',c==='mxn');
   document.getElementById('btnUSD').classList.toggle('act',c==='usd');
   renderRank(); buildScorecard();
+  var tb=document.getElementById('famBody'); if(tb){ tb.innerHTML=''; buildFam(); }
 }
 const CRIT=[
  {k:'costo',n:'Costo total',w:22},
@@ -384,6 +396,21 @@ const H=[
  {n:"Secrets Maroma Beach",z:"Riviera Maya",ta:"4.8",costo:3.2,res:9.5,playa:9.5,comida:8.5,cent:2.0,alb:8.0,fr:7.0,lleg:6.0,r:[102.8,102.8]},
  {n:"Hotel Xcaret Arte",z:"Riviera Maya",ta:"4.7",costo:3.7,res:9.0,playa:7.0,comida:9.0,cent:3.0,alb:9.0,fr:8.0,lleg:5.5,r:[97.2,97.2]},
  {n:"Grand Velas Riviera Maya",z:"Riviera Maya",ta:"4.7",costo:0.5,res:9.0,playa:8.0,comida:9.5,cent:2.0,alb:9.0,fr:6.5,lleg:6.0,r:[201.2,201.2]},
+];
+/* familiares (precios para 2 adultos + 2 niños) */
+const FAM=[
+ {n:"Ocean El Faro",z:"Punta Cana",ta:"4.3",r:[38.9,47.2],d:"Parque acuático con 4 toboganes, río lento, boliche y minigolf. El más barato con parque de verdad."},
+ {n:"Dreams Onyx",z:"Punta Cana",ta:"4.6",r:[47.2,55.5],d:"Jungle Waterpark, Explorer's Club 3-12 certificado por Cruz Roja e intercambio con el Breathless contiguo."},
+ {n:"Majestic Elegance",z:"Punta Cana",ta:"4.6",r:[48.6,56.9],d:"#3 de 56 en Bávaro con 29,921 reseñas. 9 albercas, una tipo río de 300 m. La mejor reputación por su precio."},
+ {n:"Iberostar Selection Bávaro",z:"Punta Cana",ta:"4.4",r:[48.6,56.9],d:"Star Camp segmentado en 4 edades (0-15) y Aquafun con barco pirata. Sobre Playa Bávaro."},
+ {n:"Hard Rock Punta Cana",z:"Punta Cana",ta:"4.3",r:[72.9,86.8],d:"Rockaway Bay: 26 toboganes, el parque acuático más grande de Punta Cana. 13 albercas y casino."},
+ {n:"Nickelodeon Punta Cana",z:"Punta Cana",ta:"4.3",r:[76.3,93.7],d:"Aqua Nick y Character Central. Máximo factor emocional, peor relación precio/ejecución."},
+ {n:"Iberostar Paraíso Maya",z:"Riviera Maya",ta:"4.4",r:[48.6,59.0],d:"7 toboganes, alberca de olas y río lento. Star Camp por edades. El mejor costo-beneficio familiar de México."},
+ {n:"Grand Palladium Costa Mujeres",z:"Costa Mujeres",ta:"4.4",r:[54.1,65.9],d:"Baby Club 1-3, Raggs 4-12 y Black & White 13-17 hasta medianoche — todos gratis. Playa con poco sargazo."},
+ {n:"Moon Palace Cancún",z:"Cancún",ta:"4.5",r:[62.5,72.9],d:"Niños de 17 o menos gratis + USD 500 de crédito reservando directo. 15-20 min del aeropuerto."},
+ {n:"Dreams Playa Mujeres",z:"Playa Mujeres",ta:"4.4",r:[65.9,79.8],d:"Explorer's Club y Core Zone con muro de escalada, parque acuático y campo de golf."},
+ {n:"Hyatt Ziva Cancún",z:"Cancún",ta:"4.6",r:[76.3,90.2],d:"El mejor calificado de los familiares y el único céntrico: Punta Cancún con dos playas privadas."},
+ {n:"Hotel Xcaret México",z:"Riviera Maya",ta:"4.6",r:[97.2,118.0],d:"8 parques incluidos + traslados + ferry. Solo conviene si van a hacer 3 o más parques."},
 ];
 const FX=17.35;
 let W=CRIT.map(c=>c.w), ZONE='all';
@@ -457,6 +484,14 @@ function buildScorecard(){
     tb.appendChild(tr);
   });
 }
-buildSliders(); renderRank(); buildScorecard();
+function buildFam(){
+  var tb=document.getElementById('famBody'); if(!tb) return;
+  FAM.slice().sort(function(a,b){return a.r[0]-b.r[0];}).forEach(function(h){
+    var tr=document.createElement('tr');
+    tr.innerHTML='<td><b>'+h.n+'</b></td><td>'+h.z+'</td><td>'+h.ta+'</td><td class="num">'+fmtR(h.r)+'</td><td>'+h.d+'</td>';
+    tb.appendChild(tr);
+  });
+}
+buildSliders(); renderRank(); buildScorecard(); buildFam();
 </script>
 </body></html>

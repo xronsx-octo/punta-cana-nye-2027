@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Caribe Mexicano · Los mejores todo incluido solo adultos · Guía costo-beneficio</title>
-<meta name="description" content="Censo completo de hoteles todo incluido solo adultos en Cancún, Playa Mujeres, Isla Mujeres, Cozumel y Riviera Maya: reseñas 2025-26, playas, traslados, albercas, comida y precios para 2 adultos.">
+<title>Caribe Mexicano · 18 resorts todo incluido con precios por habitación · Guía costo-beneficio</title>
+<meta name="description" content="18 resorts todo incluido de Cancún, Playa Mujeres, Isla Mujeres y Riviera Maya con precios por tipo de habitación, fotos, links oficiales, playas y traslados.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -136,6 +136,30 @@ ul.check li:before{content:"\2713";position:absolute;left:4px;top:8px;width:18px
 .stat{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:16px;padding:16px 18px;text-align:left}
 .stat .v{font-family:Fraunces,Georgia,serif;font-size:1.5rem;font-weight:700;color:#ffd98a;line-height:1.15}
 .stat .l{font-size:.79rem;opacity:.88;margin-top:4px}
+
+/* fichas de hotel con galería */
+.hotel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin:20px 0;box-shadow:0 1px 3px rgba(11,61,76,.05)}
+.hhead h3{margin:0 0 3px;font-size:1.25rem}
+.hmeta{font-size:.82rem;color:var(--muted);margin-bottom:14px}
+.hgal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:0 0 14px}
+.hgal .hgi{position:relative;display:block;aspect-ratio:4/3;border-radius:12px;overflow:hidden;background:linear-gradient(135deg,#0b3d4c,#0e7c86);text-decoration:none}
+.hgal .hgi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.hgal .hgi:hover img{transform:scale(1.05)}
+.hgal .hgc{position:absolute;left:0;right:0;bottom:0;padding:14px 10px 7px;font-size:.73rem;color:#fff;font-weight:600;background:linear-gradient(transparent,rgba(7,42,53,.8))}
+.hgal .hgi.noimg img{display:none}
+.hgal .hgi.noimg:after{content:"Ver galería oficial ↗";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.8rem;font-weight:600;text-align:center;padding:10px}
+.hgal.nogal{grid-template-columns:1fr;background:#faf7f1;border:1px dashed var(--line);border-radius:12px;padding:14px 16px;display:block}
+.hgal.nogal a{font-weight:600}
+.hgal.nogal .small{display:block;margin-top:3px}
+@media(max-width:640px){.hgal{grid-template-columns:1fr 1fr}.hgal .hgi:nth-child(3){display:none}}
+.hdatos{font-size:.87rem;color:#3d4750;margin:0 0 10px}
+.halert{background:#fff5f3;border-left:4px solid var(--coral);border-radius:0 8px 8px 0;padding:9px 13px;font-size:.85rem;margin:0 0 12px}
+table.rooms{min-width:720px;font-size:.84rem}
+table.rooms td.inc{color:#52514e;font-size:.81rem;max-width:280px}
+table.rooms td.tot{font-weight:700;color:var(--deep)}
+.hlinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.btn{display:inline-block;background:var(--deep);color:#fff;text-decoration:none;padding:7px 15px;border-radius:999px;font-size:.8rem;font-weight:600;transition:background .2s}
+.btn:hover{background:var(--teal);color:#fff}
 </style></head>
 <body data-cur="mxn">
 
@@ -143,321 +167,124 @@ ul.check li:before{content:"\2713";position:absolute;left:4px;top:8px;width:18px
 <div class="brand">Viaje <span>dic 26 · ene 27</span></div>
 <div class="dest"><a href="index.html">Punta Cana</a><a class="act" href="mexico.html">Caribe Mexicano</a><a href="comparador.html">★ Comparador</a></div>
 <div class="links">
-<a href="#reco">Recomendación</a><a href="#ranking">Ranking</a><a href="#zonas">Las zonas</a><a href="#playas">Playas</a><a href="#acceso">Traslados</a><a href="#hoteles">Hoteles</a><a href="#videos">Videos</a><a href="#cobertura">Cobertura</a><a href="#checklist">Checklist</a>
+<a href="#reco">Recomendación</a><a href="#adultos">Solo adultos</a><a href="#familiar">Familiares</a><a href="#playas">Playas</a><a href="#acceso">Traslados</a><a href="#checklist">Checklist</a>
 </div>
 <div class="curswitch"><button id="btnMXN" class="act" onclick="setCur('mxn')">MXN</button><button id="btnUSD" onclick="setCur('usd')">USD</button></div>
 </div></nav>
 
 <header class="hero">
-<h1>Caribe Mexicano <em>solo adultos</em><br>El mejor todo incluido por lo que cuesta</h1>
-<p class="sub">Censo por cadena de Cancún, Playa y Costa Mujeres, Isla Mujeres, Cozumel y Riviera Maya — incluidas las secciones 18+ dentro de complejos familiares. Reseñas 2025-2026, playas con datos de invierno, traslados reales desde CUN, albercas y pool bar, comida, y precios con cotizaciones reales para estas fechas.</p>
+<h1>Caribe Mexicano <em>todo incluido</em><br>18 resorts con precios por tipo de habitación</h1>
+<p class="sub">Cancún, Playa Mujeres, Isla Mujeres y Riviera Maya. Solo adultos, secciones 18+ y opciones familiares, cada uno con su desglose completo de habitaciones y precios, fotos de habitación, albercas y playa, y enlaces directos a su sitio oficial y su galería.</p>
 <div class="chips">
 <span class="chip">29 dic 2026 → 2 ene 2027 · 4 noches</span>
-<span class="chip">2 adultos</span>
-<span class="chip">Todo incluido · solo adultos</span>
-<span class="chip">Desde TripAdvisor 4.3</span>
+<span class="chip">Precios para 2 adultos</span>
+<span class="chip">12 solo adultos + 6 familiares</span>
 <span class="chip">Datos: 2 ago 2026 · 1 USD ≈ 17.35 MXN</span>
 </div>
 <div class="stats">
-<div class="stat"><div class="v">50+ hoteles</div><div class="l">solo adultos censados marca por marca en 6 zonas</div></div>
-<div class="stat"><div class="v"><span class="mxn">MXN 29,800</span><span class="usd">USD 1,716</span></div><div class="l">el precio más bajo con TripAdvisor 4.3+ — cotización real</div></div>
+<div class="stat"><div class="v">18 resorts</div><div class="l">con desglose de habitaciones y links oficiales</div></div>
+<div class="stat"><div class="v">100+ categorías</div><div class="l">de habitación con m², ocupación y precio</div></div>
+<div class="stat"><div class="v"><span class="mxn">MXN 22,900</span><span class="usd">USD 1,320</span></div><div class="l">desde — 4 noches, 2 adultos, categoría base más barata</div></div>
 <div class="stat"><div class="v">2 h 20 m</div><div class="l">de vuelo desde CDMX · sin pasaporte, sin trámites, en pesos</div></div>
-<div class="stat"><div class="v">9.5 / 10</div><div class="l">Playa Norte, Isla Mujeres: la mejor playa nadable del estudio</div></div>
 </div>
 </header>
 
 <div class="wrap">
 
-<div class="card note" style="margin-top:26px"><b>Qué es esta página.</b> El análisis del Caribe mexicano rehecho como <b>censo por cadena</b> y reorientado a una sola pregunta: <b>cuál hotel da más por lo que cuesta</b>. Cambios de esta edición: se aceptan secciones solo-adultos dentro de complejos familiares (así entró el nivel Altitude del Krystal Grand), el listón baja a TripAdvisor 4.3, y entraron cadenas que faltaban por completo — Royalton, Riu Palace Kukulkán y Las Américas, Privilege, Margaritaville, Iberostar Coral Level, TRS Coral, Sun Palace, Hyatt Vivid y varias más. También hubo una corrección: <b>Cozumel Palace no es solo adultos</b>. Los precios de Riviera Maya son <b>cotizaciones reales de Expedia con estas fechas exactas</b>; los de Cancún e islas son estimaciones con el recargo festivo documentado por Kayak. Comparación entre destinos en el <a href="comparador.html">Comparador</a>.</div>
+<div class="card note" style="margin-top:26px"><b>Cómo leer los precios.</b> Cada tabla trae el desglose real de categorías de habitación de la web oficial del hotel, con metros cuadrados, ocupación máxima y qué incluye. En la columna de precio verás dos marcas: <b>OF</b> es la tarifa "desde" publicada hoy en el sitio oficial, y <b>EST</b> la estimación para la semana de fin de año, con el recargo festivo documentado por hotel (en el Caribe mexicano la ventana pico va del 20 de diciembre al 5 de enero, y cotiza entre 1.5 y 2.2 veces la tarifa base). El total de 4 noches es para <b>2 adultos</b>, salvo la sección familiar que es para <b>2 adultos y 2 niños</b>. Cambia de moneda con el botón MXN/USD. <b>Ojo con los impuestos:</b> RIU y Krystal Grand publican sus tarifas sin IVA (16%) ni ISH (3%) — hay que sumar ~19% más el impuesto ambiental de Quintana Roo.</div>
 
 <section id="reco">
 <span class="kicker">01 · Veredicto</span>
-<h2>Qué reservar en el Caribe mexicano</h2>
-<div class="card win"><b class="serif" style="font-size:1.15rem">Mejor global: Royalton CHIC Cancún — <span class="mxn">MXN 34,700</span><span class="usd">USD 2,000</span> las 4 noches para 2 adultos.</b><br><br>
-Gana porque puntúa alto en las cuatro cosas que más pesan a la vez. <b>Precio:</b> de los más baratos con TripAdvisor 4.5 (10,008 reseñas). <b>Llegada:</b> 20 minutos del aeropuerto, con vuelo nacional de 2 h 20 m. <b>Céntrico:</b> está en el Km 9.7, o sea <b>Coco Bongo, Forum by the Sea y Punta Cancún a unos 700 metros a pie</b>. Y <b>fiesta con descanso:</b> rooftop Level 18, DJs y CHIC Angels para la noche; 4 albercas, 9 restaurantes y 6 bares para el día. Es 18+ real, de Marriott Autograph Collection, y suma puntos Bonvoy.<br><br>
-<b>Sus peros honestos:</b> es ruidoso por diseño — si lo que buscan es silencio absoluto, no es este — y el servicio no es de ultra-lujo, aunque el precio tampoco lo es.</div>
+<h2>Qué reservar</h2>
 <div class="grid2">
-<div class="card"><b>La sorpresa del censo: Privilege Aluxes, Isla Mujeres</b> (<span class="mxn">MXN 33,000</span><span class="usd">USD 1,900</span>). El <b>único solo-adultos en el centro del pueblo</b>: caminas al malecón, a la calle Hidalgo (bares y restaurantes de verdad, no de resort), al muelle del ferry y a <b>Playa Norte — la mejor playa nadable de todo el estudio</b> (9.5/10: olas de 20 cm, 40 metros de agua a la cintura, y su mejor temporada es justo diciembre-abril). #2 de 53 hoteles de la isla, alberca grande con swim-up bar y restaurante japonés. Su techo: producto más sencillo que un Secrets o Excellence, comida correcta más que memorable, y un norte de invierno puede pausar el ferry unas horas.</div>
-<div class="card"><b>Cero concesiones: Hyatt Vivid Playa del Carmen</b> (<span class="mxn">MXN 46,500</span><span class="usd">USD 2,679</span>, precio real). Es el que no te obliga a elegir: <b>playa propia, 13 restaurantes y bares adentro, y la Quinta Avenida a 400 metros caminando</b>. La fiesta está afuera cuando la quieres y el silencio adentro cuando no. Con <b>24,291 reseñas sosteniendo un 4.6</b>, es el céntrico con menos riesgo de sorpresa. Contra: playa urbana más chica que la de un enclave, quejas de alberca fría y colchones cansados, y 55 min desde el aeropuerto.</div>
-<div class="card"><b>Rey del precio: Royal Hideaway Playacar</b> (<span class="mxn">MXN 29,800</span><span class="usd">USD 1,716</span>, precio real de Expedia con estas fechas). <b>La anomalía de precio del estudio</b>: TA 4.5 con 10,464 reseñas, adults-only puro, playa de Playacar (mejor que la del centro), à la carte íntimos bien calificados y jardines impecables — el ahorro paga los dos vuelos y sobra. Dos concesiones reales: <b>no tiene swim-up bar</b> y su público es 40+ tranquilo, sin cara festiva; además los cuartos piden renovación. Es la compra correcta solo si el precio manda sobre todo lo demás.</div>
-<div class="card"><b>La validación más fuerte: Excellence Riviera Cancún</b> (<span class="mxn">MXN 58,100</span><span class="usd">USD 3,349</span>). <b>#1 de 44 hoteles en Puerto Morelos con 4.7 y 27,638 reseñas</b> — la combinación nota/volumen más sólida del censo entero. 8 restaurantes internacionales sin reserva, 10 bares, <b>6 albercas y lazy river</b>, suites swim-up, todo-suites. Y está a <b>25 minutos del aeropuerto</b>. Contra: es un enclave sin nada caminando, y el ruido del entretenimiento nocturno llega a las habitaciones.</div>
+<div class="card win"><b>Mejor global: Royalton CHIC Cancún.</b> Luxury Junior Suite de 56 m² desde <span class="mxn">MXN 48,600</span><span class="usd">USD 2,800</span> las 4 noches, a 700 metros a pie de Coco Bongo y Punta Cancún, con rooftop Level 18, 4 albercas y puntos Marriott Bonvoy. Es el que resuelve precio, llegada, centricidad y el balance fiesta-descanso a la vez.</div>
+<div class="card"><b>Mejor precio con gran playa: Privilege Aluxes.</b> Desde <span class="mxn">MXN 22,900</span><span class="usd">USD 1,320</span> las 4 noches — la tarifa más baja del estudio — en el centro del pueblo de Isla Mujeres, caminando a Playa Norte (la mejor playa nadable de todo el análisis) y al ferry. La <b>Wow Privilege</b> con alberca privada en rooftop cuesta <span class="mxn">MXN 45,100</span><span class="usd">USD 2,600</span>.</div>
+<div class="card"><b>Nuevo y barato: Riu Palace Kukulkán.</b> Inaugurado en noviembre de 2022, sin desgaste, frente a La Isla Shopping Village. Jr. Suite Vista Jardín desde <span class="mxn">MXN 29,100</span><span class="usd">USD 1,680</span>, y el salto a <b>Elite Club Ocean Front</b> cuesta oficialmente solo 51 dólares más por noche. 4 albercas, swim-up bar y 7 restaurantes propios.</div>
+<div class="card"><b>Mejor metro cuadrado por peso: Hyatt Vivid Playa del Carmen.</b> Junior Suite de <b>61 m² con tina doble de hidromasaje</b> desde <span class="mxn">MXN 29,800</span><span class="usd">USD 1,720</span>, con playa propia y la Quinta Avenida a 400 metros caminando. Es el único que no obliga a elegir entre resort y ciudad.</div>
 </div>
-<div class="card alert"><b>Cozumel queda descartado como sede.</b> Su <b>único</b> todo incluido solo-adultos es Secrets Aura, y está en <b>TripAdvisor 3.7 con 8,028 reseñas</b>, con quejas 2025-26 de instalaciones "tired and worn out", moho, olor a drenaje, azulejos faltantes y restaurantes cerrados al mismo tiempo; además la entrada al mar es rocosa y está a 15 min de San Miguel. Cozumel Palace, la otra opción que suele aparecer en listas, <b>no es solo adultos</b>: Palace lo comercializa con promoción "Kids and Teens Stay Free". El agua del lado oeste de la isla es de las mejores de México — vayan de excursión de buceo desde Playa del Carmen, no de sede.</div>
 </section>
 
-<section id="ranking">
-<span class="kicker">02 · Panorama</span>
-<h2>Ranking: los solo adultos del Caribe mexicano</h2>
-<p class="lead">Censo por cadena, ordenado por relación calidad-precio bajo este brief. Filtra por zona o perfil. Los precios de Riviera Maya son cotizaciones reales de Expedia con estas fechas; el resto son estimaciones.</p>
-<div class="fchips" id="rankFilters">
-<button class="act" data-f="all">Todos</button>
-<button data-f="cancun">Cancún ZH</button>
-<button data-f="pm">Playa Mujeres</button>
-<button data-f="islas">Islas</button>
-<button data-f="rm">Riviera Maya</button>
-<button data-f="valor">Mejor valor</button>
-<button data-f="desc">Descartados</button>
-</div>
-<div class="tblwrap"><table id="rankTable">
-<thead><tr><th>#</th><th>Hotel</th><th>Cadena</th><th>Zona</th><th>TripAdvisor</th><th>Playa</th><th class="num">CUN</th><th class="num">4 noches</th><th>Veredicto</th></tr></thead>
-<tbody>
-<tr data-f="cancun valor"><td>1</td><td><b>Royalton CHIC Cancún</b> <span class="tag best">Mejor global</span></td><td>Royalton / Marriott</td><td>Cancún ZH Km 9.7</td><td>4.5 · 10,008</td><td><span class="score s6">6</span></td><td class="num">20 min</td><td class="num"><span class="mxn">34,700</span><span class="usd">$2,000</span></td><td>Precio + Coco Bongo a pie + fiesta y descanso</td></tr>
-<tr data-f="islas valor"><td>2</td><td><b>Privilege Aluxes</b> <span class="tag new">Nuevo</span></td><td>Privilege</td><td>Isla Mujeres centro</td><td>4.5 · 5,133 · <b>#2/53</b></td><td><span class="score s9">9</span></td><td class="num">35 min + ferry</td><td class="num"><span class="mxn">33,000</span><span class="usd">$1,900</span></td><td>Único 18+ en el pueblo; Playa Norte caminando</td></tr>
-<tr data-f="rm valor"><td>3</td><td><b>Royal Hideaway Playacar</b> <span class="tag new">Nuevo</span></td><td>Barceló</td><td>Playacar</td><td>4.5 · 10,464</td><td><span class="score s8">8</span></td><td class="num">55 min</td><td class="num"><span class="mxn">29,800</span><span class="usd">$1,716</span></td><td>El precio más bajo con nota alta; sin swim-up bar</td></tr>
-<tr data-f="rm"><td>4</td><td><b>Hyatt Vivid Playa del Carmen</b> <span class="tag new">Nuevo</span></td><td>Hyatt Inclusive</td><td>PdC centro</td><td>4.6 · 24,291</td><td><span class="score s6">6.5</span></td><td class="num">55 min</td><td class="num"><span class="mxn">46,500</span><span class="usd">$2,679</span></td><td>Playa propia + Quinta Avenida a 400 m</td></tr>
-<tr data-f="rm valor"><td>5</td><td>Margaritaville Island Reserve <span class="tag new">Nuevo</span></td><td>Karisma</td><td>Puerto Morelos</td><td>4.6 · 2,489 · #12/44</td><td><span class="score s7">7.5</span></td><td class="num"><b>25 min</b></td><td class="num"><span class="mxn">38,300</span><span class="usd">$2,208</span></td><td>El mejor balance fiesta/relax del rango medio</td></tr>
-<tr data-f="rm valor"><td>6</td><td>Barceló Maya Riviera <span class="tag new">Nuevo</span></td><td>Barceló</td><td>Xpu-Ha</td><td>4.5 · 7,697</td><td><span class="score s9">9</span></td><td class="num">75 min</td><td class="num"><span class="mxn">37,800</span><span class="usd">$2,181</span></td><td>Gran playa y complejo enorme; muy lejos y aislado</td></tr>
-<tr data-f="cancun"><td>7</td><td><b>Riu Palace Las Américas</b> <span class="tag new">Nuevo</span></td><td>RIU</td><td>Cancún ZH Km 8.5</td><td>4.5 · 5,543</td><td><span class="score s7">7</span></td><td class="num">25 min</td><td class="num"><span class="mxn">48,600</span><span class="usd">$2,800</span></td><td>La ubicación más céntrica del Caribe; cuartos datados</td></tr>
-<tr data-f="cancun"><td>8</td><td><b>Riu Palace Kukulkán</b> <span class="tag new">Nuevo</span></td><td>RIU</td><td>Cancún ZH Km 12</td><td>4.5 · 1,704</td><td><span class="score s7">7</span></td><td class="num">25 min</td><td class="num"><span class="mxn">50,300</span><span class="usd">$2,900</span></td><td>Abierto en 2022, frente a La Isla; buffet monótono</td></tr>
-<tr data-f="rm"><td>9</td><td>The Reef 28 <span class="tag new">Nuevo</span></td><td>The Reef</td><td>PdC · 5ª Avenida</td><td>4.5 · 4,023 · #26/307</td><td><span class="score s5">4</span></td><td class="num">55 min</td><td class="num"><span class="mxn">41,900</span><span class="usd">$2,417</span></td><td>Rooftop con DJ a una cuadra de la Quinta; sin playa propia</td></tr>
-<tr data-f="cancun"><td>10</td><td>Krystal Grand · nivel Altitude <span class="tag warn">Parcial</span></td><td>Krystal</td><td>Punta Cancún Km 9.5</td><td>4.3 · 11,316</td><td><span class="score s7">7</span></td><td class="num">25 min</td><td class="num"><span class="mxn">34,700–48,600</span><span class="usd">$2,000–2,800</span></td><td>La centricidad máxima; el 18+ es solo alberca y un restaurante</td></tr>
-<tr data-f="cancun"><td>11</td><td>Secrets The Vine</td><td>Hyatt Inclusive</td><td>Cancún ZH Km 14.5</td><td>4.6 · 19,500</td><td><span class="score s5">5.5</span></td><td class="num">20-25 min</td><td class="num"><span class="mxn">52,100</span><span class="usd">$3,000</span></td><td>Fine dining en su cuadra; sin swim-up bar y cuartos cansados</td></tr>
-<tr data-f="pm valor"><td>12</td><td>Riu Latino <span class="tag new">Nuevo</span></td><td>RIU</td><td>Costa Mujeres</td><td>4.5 · 2,911</td><td><span class="score s8">8</span></td><td class="num">40 min</td><td class="num"><span class="mxn">34,700</span><span class="usd">$2,000</span></td><td>5 albercas con swim-up y buffet excelente; ruido severo</td></tr>
-<tr data-f="pm"><td>13</td><td>Secrets Playa Mujeres <span class="tag new">Nuevo</span></td><td>Hyatt Inclusive</td><td>Playa Mujeres</td><td>4.4 · 11,311</td><td><span class="score s8">8</span></td><td class="num">40 min</td><td class="num"><span class="mxn">46,800</span><span class="usd">$2,700</span></td><td>Renovado 2025-26 e intercambio con Dreams; el 5★ más barato de PM</td></tr>
-<tr data-f="rm"><td>14</td><td><b>Excellence Riviera Cancún</b></td><td>Excellence</td><td>Puerto Morelos</td><td><b>4.7</b> · 27,638 · <b>#1/44</b></td><td><span class="score s6">6.5</span></td><td class="num"><b>25 min</b></td><td class="num"><span class="mxn">58,100</span><span class="usd">$3,349</span></td><td>La validación estadística más fuerte; 6 albercas y lazy river</td></tr>
-<tr data-f="cancun"><td>15</td><td>Hyatt Zilara Cancún <span class="tag new">Renovado 2026</span></td><td>Playa Hotels / Hyatt</td><td>Cancún ZH Km 11.5</td><td>4.7 · 14,845</td><td><span class="score s6">6</span></td><td class="num">25 min</td><td class="num"><span class="mxn">76,300</span><span class="usd">$4,400</span></td><td>Producto de estreno (may 2026); diciembre +110%</td></tr>
-<tr data-f="cancun"><td>16</td><td>Live Aqua Cancún</td><td>Posadas</td><td>Cancún ZH Km 12.5</td><td>4.7 · 18,668</td><td><span class="score s5">5.5</span></td><td class="num">25 min</td><td class="num"><span class="mxn">67,700</span><span class="usd">$3,900</span></td><td>La Isla enfrente y gran comida; zen, no fiestero</td></tr>
-<tr data-f="pm"><td>17</td><td>Beloved Playa Mujeres</td><td>Excellence</td><td>Playa Mujeres</td><td><b>4.8</b> · 9,542</td><td><span class="score s8">8</span></td><td class="num">40 min</td><td class="num"><span class="mxn">59,000</span><span class="usd">$3,400</span></td><td>Couples-only boutique; sin cara festiva, enclave puro</td></tr>
-<tr data-f="rm"><td>18</td><td>UNICO 20°87°</td><td>RCD</td><td>Kantenah</td><td>4.7 · 8,624</td><td><span class="score s7">7</span></td><td class="num">70 min</td><td class="num"><span class="mxn">64,300</span><span class="usd">$3,708</span></td><td>El más lifestyle; aislado y con presión de tiempo compartido</td></tr>
-<tr data-f="pm"><td>19</td><td>Excellence Playa Mujeres</td><td>Excellence</td><td>Playa Mujeres</td><td><b>4.8</b> · 29,029</td><td><span class="score s8">8</span></td><td class="num">40 min</td><td class="num"><span class="mxn">78,100</span><span class="usd">$4,500</span></td><td>El mejor resort "puro"; enclave y renovación por fases</td></tr>
-<tr data-f="islas"><td>20</td><td>Impression Isla Mujeres</td><td>Hyatt Inclusive</td><td>Isla Mujeres sur</td><td><b>4.8</b> · 1,805</td><td><span class="score s8">8.5</span></td><td class="num">35 min + catamarán</td><td class="num"><span class="mxn">76,300</span><span class="usd">$4,400</span></td><td>Las mejores opiniones; caro y aislado del pueblo</td></tr>
-<tr data-f="pm"><td>21</td><td>TRS Coral Hotel <span class="tag new">Nuevo</span></td><td>Palladium</td><td>Costa Mujeres</td><td>4.5 · 16,664</td><td><span class="score s8">8</span></td><td class="num">40 min</td><td class="num"><span class="mxn">72,900</span><span class="usd">$4,200</span></td><td>Mayordomo incluido, pero #11 de 13 en su zona y quejas de humedad</td></tr>
-<tr data-f="cancun"><td>22</td><td>Le Blanc Spa Resort</td><td>Palace</td><td>Cancún ZH Km 10</td><td><b>4.8</b> · 10,731 · #3 Cancún</td><td><span class="score s5">5.5</span></td><td class="num">25 min</td><td class="num"><span class="mxn">98,900</span><span class="usd">$5,700</span></td><td>La mejor comida y spa; el peor costo-beneficio de la ZH</td></tr>
-<tr data-f="rm desc"><td>23</td><td>Hotel Xcaret Arte</td><td>Xcaret</td><td>PdC sur</td><td>4.7 · 6,586</td><td><span class="score s7">7</span></td><td class="num">60 min</td><td class="num"><span class="mxn">97,200</span><span class="usd">$5,600</span></td><td>Solo se justifica si van a hacer 3-4 parques Xcaret</td></tr>
-<tr data-f="rm desc"><td>24</td><td>Secrets Maroma Beach</td><td>Hyatt Inclusive</td><td>Punta Maroma</td><td><b>4.8</b> · 25,491</td><td><span class="score s9">9.5</span></td><td class="num">45 min</td><td class="num"><span class="mxn">102,800</span><span class="usd">$5,924</span></td><td>Probablemente la mejor playa del país; enclave y precio de lujo</td></tr>
-<tr data-f="rm desc"><td>25</td><td>Grand Velas Riviera Maya <span class="tag no">Descartado</span></td><td>Velas</td><td>PdC norte</td><td>4.7</td><td><span class="score s8">8</span></td><td class="num">45 min</td><td class="num"><span class="mxn">201,200</span><span class="usd">$11,596</span></td><td>4.3 veces el precio del ganador; ni siquiera es 18+ puro</td></tr>
-<tr data-f="islas desc"><td>26</td><td>Secrets Aura Cozumel <span class="tag no">Descartado</span></td><td>Hyatt Inclusive</td><td>Cozumel</td><td>3.7 · 8,028</td><td><span class="score s7">7</span></td><td class="num">van + ferry</td><td class="num"><span class="mxn">38,200</span><span class="usd">$2,200</span></td><td>Único 18+ de la isla y muy por debajo del listón</td></tr>
-</tbody></table></div>
-<p class="small">También censados y viables según prioridades: <b>Sun Palace</b> (Km 20, TA 4.7, <span class="mxn">MXN 67,700</span><span class="usd">$3,900</span>), <b>Iberostar Selection Coral Cancún — Coral Level</b> (18+, TA 4.7 con ficha propia, <span class="mxn">MXN 53,800</span><span class="usd">$3,100</span>), <b>Excellence Coral Playa Mujeres</b> (abrió feb 2025, TA 4.7), <b>Secrets Mirabel</b> (abrió nov 2025, Km 19.5), <b>Hyatt Vivid Grand Island</b>, <b>ATELIER Playa Mujeres</b> (TA 4.8, #1 de PM), <b>Temptation Cancún</b> (21+, Km 3.5), <b>Almare Isla Mujeres</b> (Marriott, ex Isla Mujeres Palace), <b>Bahia Principe Escape Sian Ka'an</b> y <b>Valentin Imperial</b>. Y dos alertas de disponibilidad: <b>Paradisus PdC "The Reserve" aparece agotado</b> y <b>Catalonia Royal Tulum sin inventario</b> para estas fechas.</p>
+<section id="adultos">
+<span class="kicker">02 · Solo adultos</span>
+<h2>Los 12 solo adultos, con precios por habitación</h2>
+<p class="lead">Cancún Zona Hotelera, Isla Mujeres, Puerto Morelos y Playa del Carmen. Incluye hoteles solo-adultos puros y el nivel Altitude del Krystal Grand, que es una sección 18+ dentro de un resort familiar.</p>
+<div id="mxAdultos"></div>
 </section>
 
-<section id="zonas">
-<span class="kicker">03 · Geografía</span>
-<h2>Las zonas, en corto</h2>
-<div class="grid2">
-<div class="card"><h3 style="margin-top:0">Cancún Zona Hotelera — la ciudad caminando</h3>El único lugar del Caribe donde un solo-adultos de 4.5-4.8 convive con plazas, farmacias y 50 restaurantes a distancia caminable. El nodo <b>Punta Cancún (Km 9-10)</b> es el corazón: Coco Bongo, Forum by the Sea, Plaza Caracol. En el Km 12-13 está <b>La Isla Shopping Village</b> y Kukulcán Plaza. A 20-25 min del aeropuerto. Su debilidad es la playa del tramo este: espectacular para caminar, con banderas cuando entra un norte.</div>
-<div class="card"><h3 style="margin-top:0">Playa y Costa Mujeres — el enclave de lujo</h3>Bahía parcialmente abrigada por Isla Mujeres: mar calmado mientras Cancún tiene olas, 3 km de arena ancha semiprivada. Aquí están Excellence, Beloved, ATELIER, Secrets Playa Mujeres, TRS Coral y Riu Latino. 30-45 min de CUN, <b>sin absolutamente nada caminando</b>: todo pasa dentro del resort. Letra chica: pasto marino y agua turbia 1-2 días después de un norte.</div>
-<div class="card"><h3 style="margin-top:0">Isla Mujeres — pueblo y la mejor playa</h3><b>Playa Norte</b> es la mejor playa nadable del estudio (9.5/10) y su temporada óptima es justo diciembre-abril. El centro del pueblo (calle Hidalgo, malecón) tiene vida propia, no de resort. Privilege Aluxes está ahí mismo; Impression y Almare están al sur, aislados y con llegada en catamarán o taxi. Riesgo a considerar: un norte puede pausar el ferry unas horas.</div>
-<div class="card"><h3 style="margin-top:0">Riviera Maya — donde están las gangas</h3>De Puerto Morelos (25 min de CUN, con pueblo real y arrecife) a Playa del Carmen (55 min, con la <b>Quinta Avenida</b>, la única zona verdaderamente urbana del corredor) hasta Kantenah y Akumal (70-75 min, enclaves puros). Es la zona con las mejores cotizaciones reales del censo: Royal Hideaway Playacar, Barceló Maya Riviera y Margaritaville. Alerta: Playa del Carmen centro vive una crisis de erosión activa con accesos cerrados en 2026.</div>
-</div>
+<section id="familiar">
+<span class="kicker">03 · Con niños</span>
+<h2>Los 6 mejores familiares</h2>
+<p class="lead">Precios para <b>2 adultos y 2 niños</b>. Seleccionados por reputación (TripAdvisor 4.3+) y relación calidad-precio, con detalle de kids club por edades, parques acuáticos y suites familiares.</p>
+<div class="card note"><b>Dos cosas que cambian el total real:</b> cada cadena calcula distinto la tarifa del tercer y cuarto ocupante menor de edad — gratis, 50%, o tarifa plana por rango de edad. Y el 31 de diciembre casi todos cobran <b>cena de gala</b> (USD 80-200 por adulto, la mitad por niño) que no viene en la tarifa publicada. Pregunten ambas cosas por escrito.</div>
+<div id="mxFamiliar"></div>
 </section>
 
 <section id="playas">
 <span class="kicker">04 · El mar</span>
 <h2>Playas en invierno</h2>
-<p class="lead">Del 25 dic al 5 ene el sargazo está en su mínimo anual (2026 fue año récord, así que puede haber rezagos en la Riviera). El factor decisivo en esas fechas son los "nortes": frentes fríos con rachas de 40-60 km/h que 1-2 días de cada 5 cambian el mar por completo.</p>
+<p class="lead">Del 25 de diciembre al 5 de enero el sargazo está en su mínimo anual. El factor decisivo en esas fechas son los "nortes": frentes fríos con rachas de 40 a 60 km/h que uno o dos días de cada cinco cambian el mar por completo.</p>
 <div class="grid2">
-<div class="card win"><h3 style="margin-top:0">🥇 Playa Norte, Isla Mujeres · <span class="score s9">9.5</span></h3>La piscina natural de la región: olas de 20-30 cm, 40 metros caminando con agua a la cintura, sin corrientes, y su mejor temporada es dic-abr. Con un norte fuerte: 24-48 h de agua picada y el ferry puede pausarse unas horas.</div>
-<div class="card win"><h3 style="margin-top:0">🥈 Costa y Playa Mujeres · <span class="score s8">8</span></h3>Bahía abrigada por Isla Mujeres: "sin olas" mientras Cancún tiene olas grandes. Su letra chica no es el sargazo sino el pasto marino y el agua turbia 1-2 días después de un norte.</div>
-<div class="card"><h3 style="margin-top:0">Riviera Maya: Maroma <span class="score s9">9.5</span>, Xpu-Ha <span class="score s9">9</span>, Playacar <span class="score s8">8</span>, Akumal <span class="score s7">7.5</span>, Puerto Morelos <span class="score s6">6</span></h3><b>Maroma</b> y <b>Xpu-Ha</b> son playa de élite (franjas anchas, entrada plana, olas suaves). <b>Playacar</b> es mejor que la del centro de Playa del Carmen y se limpia a diario. <b>Akumal</b> es bahía protegida con tortugas, clara justo en nov-feb. <b>Puerto Morelos</b> tiene arrecife que calma pero suelta pasto marino.</div>
-<div class="card alert"><h3 style="margin-top:0">Cancún ZH tramo este (Km 9-17.5) · <span class="score s5">5.5-6</span></h3>La arena más espectacular del viaje para caminar… y la más caprichosa para nadar en invierno: es el tramo expuesto a mar abierto, el primero en izar bandera roja cuando entra un norte (en enero de 2026 un frente cerró 8 playas públicas y hubo 80 rescates en un domingo). Con tiempo estable se nada bien; en 5 días, cuenten con 1-2 de "playa como paisaje". Regla universal: las banderas mandan y jamás naden de noche.</div>
+<div class="card win"><h3 style="margin-top:0">🥇 Playa Norte, Isla Mujeres · 9.5/10</h3>La piscina natural de la región: olas de 20 a 30 cm, 40 metros caminando con agua a la cintura, sin corrientes, y su mejor temporada es justo diciembre-abril. Con un norte fuerte: 24 a 48 h de agua picada y el ferry puede pausarse unas horas.</div>
+<div class="card win"><h3 style="margin-top:0">🥈 Costa y Playa Mujeres · 8/10</h3>Bahía abrigada por Isla Mujeres: sin olas mientras Cancún tiene olas grandes. Su letra chica no es el sargazo sino el pasto marino y el agua turbia uno o dos días después de un norte.</div>
+<div class="card"><h3 style="margin-top:0">Riviera Maya: Maroma 9.5, Xpu-Ha 9, Playacar 8, Akumal 7.5, Puerto Morelos 6</h3><b>Maroma</b> y <b>Xpu-Ha</b> son playa de élite (franjas anchas, entrada plana, olas suaves). <b>Playacar</b> es mejor que la del centro de Playa del Carmen y se limpia a diario. <b>Akumal</b> es bahía protegida con tortugas, clara justo en nov-feb. <b>Puerto Morelos</b> tiene arrecife que calma pero suelta pasto marino.</div>
+<div class="card alert"><h3 style="margin-top:0">Cancún ZH tramo este (Km 9 a 17.5) · 5.5 a 6/10</h3>La arena más espectacular del viaje para caminar y la más caprichosa para nadar en invierno: es el tramo expuesto a mar abierto, el primero en izar bandera roja cuando entra un norte (en enero de 2026 un frente cerró 8 playas públicas y hubo 80 rescates en un domingo). Con tiempo estable se nada bien; en 5 días, cuenten con 1 o 2 de playa como paisaje.</div>
 </div>
 </section>
 
 <section id="acceso">
 <span class="kicker">05 · Logística</span>
 <h2>Vuelos y traslados</h2>
-<div class="card"><h3 style="margin-top:0">CDMX → Cancún: la gran ventaja de este destino</h3>Vuelo directo de 2 h 15 m – 2 h 35 m con Aeroméxico (AICM), Volaris (AICM/AIFA) y VivaAerobus (fuerte en AIFA) — la ruta doméstica más servida del país, con ~67 vuelos diarios. Para estas fechas comprando ya: <b>básica ~<span class="mxn">MXN 3,500–5,500</span><span class="usd">USD 200–320</span> redondo por persona</b> en low-cost, <span class="mxn">MXN 4,000–7,000</span><span class="usd">USD 230–400</span> con maleta documentada, y Aeroméxico <span class="mxn">MXN 5,500–10,000</span><span class="usd">USD 320–580</span> (diciembre es el mes más caro, +39%). AIFA sale más barato pero con menos horarios y 45-90 min de traslado terrestre. Y siendo viaje nacional: <b>sin pasaporte, sin e-ticket, sin filas de migración</b>. Ventana óptima de compra: agosto-septiembre.</div>
+<div class="card"><h3 style="margin-top:0">CDMX → Cancún: la gran ventaja de este destino</h3>Vuelo directo de 2 h 15 m a 2 h 35 m con Aeroméxico (AICM), Volaris (AICM y AIFA) y VivaAerobus (fuerte en AIFA) — la ruta doméstica más servida del país, con unos 67 vuelos diarios. Para estas fechas comprando ya: <b>básica ~<span class="mxn">MXN 3,500 a 5,500</span><span class="usd">USD 200 a 320</span> redondo por persona</b> en low-cost, <span class="mxn">MXN 4,000 a 7,000</span><span class="usd">USD 230 a 400</span> con maleta documentada, y Aeroméxico <span class="mxn">MXN 5,500 a 10,000</span><span class="usd">USD 320 a 580</span> (diciembre es el mes más caro, +39%). Y siendo viaje nacional: <b>sin pasaporte, sin e-ticket, sin filas de migración</b>. Ventana óptima de compra: agosto-septiembre.</div>
 <div class="tblwrap"><table>
 <thead><tr><th>Hotel / zona</th><th class="num">Minutos desde CUN</th><th class="num">Privado 2 pax (ida / redondo)</th><th>Notas</th></tr></thead>
 <tbody>
+<tr><td>Moon Palace Cancún</td><td class="num">15-20</td><td class="num">$25-40 / $48-75</td><td>La llegada más rápida del estudio</td></tr>
 <tr><td>Excellence Riviera Cancún · Margaritaville (Puerto Morelos)</td><td class="num">20-25</td><td class="num">$29 / $58</td><td>Los grandes 5★ más cercanos al aeropuerto</td></tr>
-<tr><td>Royalton CHIC · Krystal Grand · Riu Palace Las Américas (Punta Cancún)</td><td class="num">20-25</td><td class="num">$25-45 / $48-83</td><td>Nodo de vida nocturna a pie</td></tr>
-<tr><td>Secrets The Vine · Live Aqua · Zilara · Kukulkán (ZH Km 11-15)</td><td class="num">25-30</td><td class="num">$25-45 / $48-83</td><td>La Isla y Kukulcán Plaza caminando</td></tr>
-<tr><td>Excellence / Beloved / ATELIER / TRS Coral / Riu Latino (Playa Mujeres)</td><td class="num">30-45</td><td class="num">$30-32 / $55-65</td><td>Zona de puros resorts, nada caminable</td></tr>
+<tr><td>Royalton CHIC · Krystal Grand · Riu Palace Las Américas · Hyatt Ziva (Punta Cancún)</td><td class="num">20-25</td><td class="num">$25-45 / $48-83</td><td>Nodo de vida nocturna a pie</td></tr>
+<tr><td>Secrets The Vine · Live Aqua · Zilara · Riu Kukulkán (ZH Km 11-15)</td><td class="num">25-30</td><td class="num">$25-45 / $48-83</td><td>La Isla y Kukulcán Plaza caminando</td></tr>
+<tr><td>Dreams y Grand Palladium (Playa y Costa Mujeres)</td><td class="num">25-40</td><td class="num">$30-32 / $55-65</td><td>Zona de puros resorts, nada caminable</td></tr>
 <tr><td>Privilege Aluxes (Isla Mujeres centro)</td><td class="num">30-35 + ferry</td><td class="num">terrestre $29-35 + ferry MX$290 pp</td><td>Ultramar cada 30 min; última salida de regreso ~23:00</td></tr>
-<tr><td>Impression Isla Mujeres</td><td class="num">30-35 + catamarán</td><td class="num">catamarán incluido</td><td>Avisar vuelo con 48 h; con norte los pasan al ferry público</td></tr>
-<tr><td>Secrets Maroma (Punta Maroma)</td><td class="num">40-50</td><td class="num">$40-77 / $83-120</td><td>—</td></tr>
-<tr><td>Royal Hideaway · Hyatt Vivid · The Reef 28 (Playa del Carmen)</td><td class="num">50-55</td><td class="num">$42-49 / $83-98</td><td>Quinta Avenida caminando (o a 5 min en taxi desde Playacar)</td></tr>
-<tr><td>UNICO · Barceló Maya · Sian Ka'an (Kantenah, Xpu-Ha, Akumal)</td><td class="num">70-80</td><td class="num">$49-60 / $98-120</td><td>Casi 3 h de carretera ida y vuelta</td></tr>
+<tr><td>Royal Hideaway · Hyatt Vivid (Playa del Carmen)</td><td class="num">50-55</td><td class="num">$42-49 / $83-98</td><td>Quinta Avenida caminando, o a 5 min en taxi desde Playacar</td></tr>
+<tr><td>Iberostar Paraíso · Hotel Xcaret</td><td class="num">30-75</td><td class="num">$42-60 · Xcaret lo incluye</td><td>Xcaret incluye el traslado redondo en su tarifa</td></tr>
 </tbody></table></div>
 <div class="grid2">
-<div class="card"><h3 style="margin-top:0">Uber, taxis y Tren Maya</h3>Uber es legal pero en la práctica evita recoger en el aeropuerto (presión del sindicato de taxis) y las recogidas dentro de la Zona Hotelera son conflictivas; funciona bien en Cancún ciudad (MX$100-150 el viaje). Al sur casi no hay cobertura. Conclusión: <b>transfer prepagado para aeropuerto y traslados largos; Uber o DiDi solo urbano</b>. El Tren Maya (aeropuerto ↔ Playa del Carmen) tiene solo 3 salidas diarias y estación retirada: no aporta a este itinerario.</div>
-<div class="card"><h3 style="margin-top:0">Caminatas internas</h3>Compactos: Royalton CHIC, Le Blanc, Zilara Cancún, The Vine, Live Aqua, Beloved, Privilege Aluxes, Hyatt Vivid, The Reef 28. Medianos caminables: Maroma, Excellence Riviera Cancún, Margaritaville, Royal Hideaway, ATELIER. Grandes: Excellence Playa Mujeres (extenso pero a pie). Enormes con carrito casi obligatorio: Barceló Maya, TRS Yucatán y el complejo Grand Palladium.</div>
+<div class="card"><h3 style="margin-top:0">Uber, taxis y Tren Maya</h3>Uber es legal pero en la práctica evita recoger en el aeropuerto (presión del sindicato de taxis) y las recogidas dentro de la Zona Hotelera son conflictivas; funciona bien en Cancún ciudad (MX$100-150 el viaje). Al sur casi no hay cobertura. Conclusión: <b>transfer prepagado para aeropuerto y traslados largos; Uber o DiDi solo urbano</b>. El Tren Maya tiene solo 3 salidas diarias y estación retirada: no aporta a este itinerario.</div>
+<div class="card"><h3 style="margin-top:0">Caminatas internas</h3>Compactos: Royalton CHIC, Zilara Cancún, Secrets The Vine, Live Aqua, Privilege Aluxes, Hyatt Vivid, Krystal Grand. Medianos caminables: Excellence Riviera Cancún, Margaritaville, Royal Hideaway, Riu Kukulkán. Grandes: Dreams Playa Mujeres, Grand Palladium Costa Mujeres. Enormes con carrito casi obligatorio: Moon Palace (2,036 habitaciones) y Hotel Xcaret (1,800 suites).</div>
 </div>
-</section>
-
-<section id="hoteles">
-<span class="kicker">06 · A fondo</span>
-<h2>Los cinco finalistas</h2>
-
-<div class="hcard">
-<h3>1 · Royalton CHIC Cancún <span class="tag best">Mejor global</span></h3>
-<div class="meta">Marriott Autograph Collection · Zona Hotelera Km 9.7 · 18+ real · 458 suites · TA 4.5 (10,008) · <span class="mxn">MXN 34,700</span><span class="usd">USD 2,000</span></div>
-<div class="facts">
-<div class="fact"><b>Céntrico · 9.5/10</b>Coco Bongo, Forum by the Sea y Punta Cancún a ~700 m a pie.</div>
-<div class="fact"><b>Fiesta + relax · 9/10</b>Rooftop Level 18, DJs y CHIC Angels de noche; 4 albercas y 6 bares de día.</div>
-<div class="fact"><b>Comida</b>9 restaurantes. Correcto para su precio, no gastronómico.</div>
-<div class="fact"><b>Extra</b>Suma puntos Marriott Bonvoy — raro en todo incluido.</div>
-</div>
-<p>Con 10 mil reseñas sosteniendo un 4.5, es el mejor precio por estrella de la Zona Hotelera. Ambiente deliberadamente ruidoso: si buscan silencio, mejor Live Aqua o Royal Hideaway; para "salgo a la calle y regreso caminando", es imbatible en su rango.</p>
-</div>
-
-<div class="hcard">
-<h3>2 · Privilege Aluxes, Isla Mujeres <span class="tag new">Nuevo en el análisis</span></h3>
-<div class="meta">Privilege Hotels · Col. Centro, Isla Mujeres · solo adultos · TA 4.5 (5,133) · #2 de 53 en la isla · <span class="mxn">MXN 33,000</span><span class="usd">USD 1,900</span></div>
-<div class="facts">
-<div class="fact"><b>Playa · 9/10</b>Playa Norte a pie: la mejor playa nadable del estudio, y su temporada óptima es dic-abr.</div>
-<div class="fact"><b>Céntrico · 9/10</b>Malecón, calle Hidalgo y muelle del ferry caminando. Vida de pueblo, no de resort.</div>
-<div class="fact"><b>Albercas</b>Alberca grande con swim-up bar; nota de ubicación 9.5/10 en las OTAs.</div>
-<div class="fact"><b>El pero</b>Producto más sencillo que un Secrets; comida correcta más que memorable.</div>
-</div>
-<p>Es la mejor relación calidad-precio del censo mexicano si el plan es "pueblo caminable + playa top". A considerar: la llegada suma ferry (Ultramar cada 30 min, ~MX$290 por persona) y un norte de invierno puede pausarlo unas horas.</p>
-</div>
-
-<div class="hcard">
-<h3>3 · Royal Hideaway Playacar <span class="tag new">Nuevo en el análisis</span></h3>
-<div class="meta">Barceló · Playacar, Playa del Carmen · solo adultos puro · TA 4.5 (10,464) · <span class="mxn">MXN 29,800</span><span class="usd">USD 1,716</span> — precio real de Expedia</div>
-<div class="facts">
-<div class="fact"><b>Precio</b>El más bajo del censo con TA 4.3+: USD 958 por debajo de su tarifa de lista, con impuestos incluidos.</div>
-<div class="fact"><b>Playa · 8/10</b>Playacar, mejor que la del centro de Playa del Carmen, con retiro diario de sargazo.</div>
-<div class="fact"><b>Comida</b>6 restaurantes, à la carte íntimos bien calificados; buffet de desayuno mediocre. Reservas con 2 semanas.</div>
-<div class="fact"><b>Los peros</b><b>Sin swim-up bar</b>, sin coffee bar; cuartos "clásicos" con reportes de baños viejos; público 40+ tranquilo.</div>
-</div>
-<p>Zona cerrada y arbolada, con la Quinta Avenida a 5 min en taxi (o 25 min caminando por la playa). Si el pool bar y la vida nocturna les dan igual, este es el número 1 sin discusión: el ahorro paga los dos vuelos y sobra.</p>
-</div>
-
-<div class="hcard">
-<h3>4 · Hyatt Vivid Playa del Carmen <span class="tag new">Nuevo en el análisis</span></h3>
-<div class="meta">Hyatt Inclusive Collection · Av. Constituyentes, centro de PdC · 18+ · TA 4.6 (24,291) · <span class="mxn">MXN 46,500</span><span class="usd">USD 2,679</span> — precio real</div>
-<div class="facts">
-<div class="fact"><b>Céntrico · 10/10</b>Walkability 100/100 con playa propia: la Quinta Avenida a 400 m. Combinación que no repite nadie.</div>
-<div class="fact"><b>Opiniones</b>24,291 reseñas sosteniendo 4.6 — la base más grande de todos los céntricos.</div>
-<div class="fact"><b>Comida</b>13 restaurantes y bares; servicio irregular en algunos à la carte.</div>
-<div class="fact"><b>Los peros</b>Alberca fría, colchones "lumpy", cabañas de pago ($99-149) y playa urbana más chica.</div>
-</div>
-<p>Entretenimiento nocturno todos los días (karaoke, silent disco) y toda la vida de Playa del Carmen a la salida. Construido en 2002 y actualizado en 2019; sin obras anunciadas para 2026.</p>
-</div>
-
-<div class="hcard">
-<h3>5 · Excellence Riviera Cancún</h3>
-<div class="meta">Excellence Group · Puerto Morelos · solo adultos, all-suite · TA 4.7 (27,638) · #1 de 44 en su zona · <span class="mxn">MXN 58,100</span><span class="usd">USD 3,349</span></div>
-<div class="facts">
-<div class="fact"><b>Opiniones · 9.5/10</b>La combinación nota/volumen más sólida del censo entero, con Travelers' Choice.</div>
-<div class="fact"><b>Albercas · 9/10</b>6 albercas + lazy river, suites swim-up.</div>
-<div class="fact"><b>Comida · 9/10</b>8 restaurantes internacionales sin reserva y 10 bares — el punto fuerte histórico de la marca.</div>
-<div class="fact"><b>Llegada</b>25 min de CUN; pueblo de Puerto Morelos a 12 min en taxi.</div>
-</div>
-<p><b>En contra:</b> es un enclave sin nada caminando, el ruido del entretenimiento nocturno llega a las habitaciones y el wifi es flojo. Si el peso mayor lo llevan comida, albercas y llegada fácil, este gana el censo.</p>
-</div>
-</section>
-
-<section id="videos">
-<span class="kicker">07 · Para ver</span>
-<h2>Videoteca verificada</h2>
-<p class="lead">Enlaces confirmados uno por uno contra la API oficial de YouTube. Clic en cualquier tarjeta para abrir el video.</p>
-<div class="vtabs" id="vtabs">
-<button class="act" data-cat="all">Todos</button>
-<button data-cat="comp">Comparativas</button>
-<button data-cat="hotel">Por hotel</button>
-</div>
-<div class="vgridd" id="vgrid"></div>
-</section>
-
-<section id="cobertura">
-<span class="kicker">08 · Transparencia</span>
-<h2>Cobertura: qué se revisó y qué no calificó</h2>
-<div class="tblwrap"><table>
-<thead><tr><th>Hotel / marca</th><th>Motivo de exclusión</th></tr></thead>
-<tbody>
-<tr><td><b>Cozumel Palace</b></td><td>No es solo adultos: Palace lo comercializa como hotel familiar con promoción "Kids and Teens Stay Free". <b>Corrección de ediciones anteriores</b></td></tr>
-<tr><td><b>Krystal Cancún · Krystal Grand (hotel) · Krystal Urban</b></td><td>Familiares con kids club 3-12 años. El Urban además no es todo incluido, no está en la zona de playa y es 4★. <b>Solo entró el nivel Altitude</b>, por su alberca infinity y restaurante 18+</td></tr>
-<tr><td>Riu Palace Península · Riu Cancún · Riu Caribe · Riu Palace Costa Mujeres · Riu Dunamar · Riu Ventura · Riu Tequila · Riu Playacar</td><td>Familiares con kids club. El "Elite Club" del Palace Península sí es 18+ pero reabrió en julio 2026 sin historial de reseñas</td></tr>
-<tr><td>Turquoize @ Hyatt Ziva Cancún</td><td>Solo la alberca de azotea está restringida a adultos; el resto se comparte con el resort familiar. TA 3.9</td></tr>
-<tr><td>Moon Palace · Beach Palace · Paradisus Cancún · Fiesta Americana · Wyndham Alltra · Hard Rock Cancún · Mia Reef · Izla · Esplendor · Zoëtry Villa Rolandi · Sunscape e Iberostar Cozumel · Presidente InterContinental</td><td>Familiares o sin sección con restricción real de edad. El Zoëtry además lleva más de un año cerrado por renovación estancada</td></tr>
-<tr><td>Dreams (toda la marca) · Sandos Caracol · Bahia Principe Grand Tulum · Azul Beach · Iberostar Waves · Vidanta</td><td>Familiares. "Preferred Club" de Dreams es un nivel de servicio, no una sección 18+</td></tr>
-<tr><td>Nizuc · Rosewood Mayakoba · Grand Fiesta Americana Coral Beach · Marriott, Westin y JW Marriott · Conrad Tulum · Hotel B Cozumel</td><td>No son todo incluido (plan europeo o AI opcional)</td></tr>
-<tr><td>Secrets Aura Cozumel · Secrets Tulum · Hyatt Zilara Riviera Maya · Senses · Platinum Yucatán Princess · Golden Parnassus · Grand Oasis Sens · The Pyramid · Sandos Cancún</td><td>Por debajo de TripAdvisor 4.3 o de categoría insuficiente</td></tr>
-<tr><td>Grand Velas · Impression Moxché · Hotel Xcaret Arte · Secrets Maroma · Secrets Akumal · Hotel Mousai · El Dorado Maroma</td><td>Sí califican, pero su costo-beneficio no compite: de 2 a 4.3 veces el precio del ganador. Xcaret Arte solo se justifica si van a hacer 3-4 parques</td></tr>
-<tr><td>El Dorado Royale / Casitas Royale (Karisma)</td><td>Comida notable, pero patrón claro en 2025-26: habitaciones anticuadas, albercas frías inutilizables y mar bloqueado por rompeolas</td></tr>
-<tr><td>Sensira Resort</td><td>Es familiar con secciones de adultos, y hay reseñas de "very run down and dirty"</td></tr>
-</tbody></table></div>
 </section>
 
 <section id="checklist">
-<span class="kicker">09 · Antes de pagar</span>
+<span class="kicker">06 · Antes de pagar</span>
 <h2>Checklist</h2>
 <div class="card">
 <ul class="check">
-<li><b>Reservar hotel en agosto-septiembre:</b> las promociones vigentes excluyen la semana del 31 y el inventario se mueve rápido a 5 meses.</li>
+<li><b>Reservar hotel en agosto-septiembre:</b> las promociones vigentes suelen excluir la semana del 31 y el inventario se mueve rápido a cinco meses.</li>
 <li><b>Comprar vuelos ya</b> (diciembre +39%): CDMX→CUN matutino del 29; comparar AIFA contra AICM contando el taxi.</li>
-<li><b>Confirmar por escrito</b> si hay cargos obligatorios en cenas especiales y si 4 noches cumplen la estancia mínima de temporada alta.</li>
-<li><b>Si eligen Krystal Grand Altitude:</b> tener claro que el hotel admite niños (Kamp Krystal 3-10 años) y que el 18+ se limita a la alberca infinity y a Le Délice, que además pide mínimo 3 noches.</li>
-<li><b>Reservar directo con la cadena:</b> RIU Class -10%, Palace con crédito de resort, Excellence con traslados, ATELIER cotiza en pesos y regala traslado con 4+ noches, Marriott/Hyatt suman puntos.</li>
+<li><b>Sumar los impuestos</b> a las tarifas de RIU y Krystal Grand: publican sin IVA (16%) ni ISH (3%), más el impuesto ambiental de Quintana Roo por habitación y noche.</li>
+<li><b>Confirmar la estancia mínima</b> de temporada alta (varios piden 4 a 7 noches en Año Nuevo) y si la cena de gala del 31 lleva suplemento obligatorio.</li>
+<li><b>Si eligen Krystal Grand Altitude:</b> tener claro que el hotel admite niños (Kamp Krystal, 3 a 10 años) y que el 18+ se limita a la alberca infinity y al restaurante Le Délice, que además pide mínimo 3 noches.</li>
+<li><b>Ojo con Hyatt Zilara y Hyatt Ziva Cancún:</b> son hoteles separados y no comparten instalaciones. Es el error de reserva más común de la zona.</li>
+<li><b>En Moon Palace:</b> confirmar por escrito que la promoción de niños gratis aplica a la semana del 31 y que su sección tiene acceso al parque acuático, que está en Moon Palace The Grand.</li>
+<li><b>Reservar directo con la cadena:</b> RIU Class -10%, Palace con crédito de resort, Excellence con traslados, Marriott y Hyatt suman puntos.</li>
 <li><b>Prereservar el transfer</b> ($25-60 según zona); Uber no es plan A en el aeropuerto ni en la Zona Hotelera.</li>
-<li><b>Si van a Isla Mujeres:</b> revisar el horario del último ferry de regreso y considerar que un norte puede pausarlo.</li>
-<li><b>Al llegar:</b> apartar los à la carte con el concierge el mismo día; en resorts grandes, pedir habitación céntrica.</li>
 <li><b>En la playa:</b> las banderas mandan — los nortes de invierno son reales en el tramo este de Cancún — y nunca naden de noche.</li>
 </ul>
 </div>
 </section>
 
 <section id="cierre">
-<span class="kicker">10 · Cierre</span>
-<h2>Conclusión</h2>
-<p>El Caribe mexicano gana la comparación de costo-beneficio y no por poco: el vuelo nacional cuesta la mitad que volar a Punta Cana y no hay pasaporte ni trámites de por medio, lo que en la práctica equivale a subir dos categorías de hotel con el mismo presupuesto. Dentro de México, el orden depende de qué pese más: <b>Royalton CHIC Cancún</b> si quieren ciudad caminando con fiesta y descanso al mismo precio; <b>Privilege Aluxes</b> si la prioridad es playa espectacular y pueblo real; <b>Royal Hideaway Playacar</b> si manda el precio puro; <b>Hyatt Vivid Playa del Carmen</b> si prefieren no ceder en nada y pagar un poco más; y <b>Excellence Riviera Cancún</b> si comida, albercas y llegada fácil son lo decisivo. <b>Cozumel queda fuera como sede</b> — es excursión, no base. El comparador con Punta Cana está <a href="comparador.html">aquí</a>.</p>
-<p class="small"><b>Fuentes:</b> TripAdvisor (notas, rankings, volumen y reseñas 2025-26), Expedia (cotizaciones reales con las fechas exactas para Riviera Maya), Kayak y Momondo (promedios y recargo festivo por hotel), Oyster, All-Inclusive Guide, The Points Guy, Upgraded Points, webs oficiales de cada cadena, prensa del sector (Caribbean Journal, TravelPulse, Hyatt Newsroom), informes de sargazo (Red de Monitoreo de Q.R., USF, howisthesargassum), reportes de banderas y frentes fríos de prensa local, y videos de YouTube verificados vía oEmbed. Censo y verificación realizados el 1-2 de agosto de 2026. Precios marcados como estimación: <b>verificar en el motor de reservas antes de pagar</b>. Documento informativo, no asesoría de compra.</p>
+<span class="kicker">07 · Cierre</span>
+<h2>Fuentes y método</h2>
+<p class="small">Datos recopilados el 1 y 2 de agosto de 2026 con censo por cadena y verificación cruzada. <b>Tipos de habitación, metros cuadrados, ocupación y tarifas "desde"</b>: webs oficiales de cada hotel (royaltonresorts.com, privilegehotels.com, barcelo.com, hyattinclusivecollection.com, excellenceresorts.com, karismahotels.com, riu.com, hyatt.com, lacoleccionresorts.com, krystalgrand.com, palladiumhotelgroup.com, moonpalacecancun.com, iberostar.com, hotelxcaret.com). <b>Notas, volumen de reseñas y rankings</b>: TripAdvisor, verificados hotel por hotel. <b>Rangos de precio y recargo festivo</b>: Kayak, Momondo, Expedia y All-Inclusive Guide. <b>Playas, sargazo, nortes, traslados y vuelos</b>: Red de Monitoreo del Sargazo de Quintana Roo, USF, prensa local, Ultramar, Kayak México y guías de traslados. Las imágenes provienen de los CDN oficiales de cada cadena y fueron verificadas una por una; algunos hoteles cargan su galería por JavaScript y en esos casos se enlaza la galería oficial. <b>Todo precio marcado EST es una estimación</b> — verifícalo en el motor de reservas antes de pagar. Documento informativo, no asesoría de compra. Comparación entre destinos en el <a href="comparador.html">Comparador</a>.</p>
 </section>
 
 </div>
-<footer>Caribe Mexicano solo adultos · Guía costo-beneficio · 2 adultos · 29 dic 2026 → 2 ene 2027 · actualizado el 2 de agosto de 2026 · <a href="index.html">Punta Cana</a> · <a href="comparador.html">Comparador</a></footer>
+<footer>Caribe Mexicano · 18 resorts todo incluido con precios por habitación · actualizado el 2 de agosto de 2026 · <a href="index.html">Punta Cana</a> · <a href="comparador.html">Comparador</a></footer>
 
+<script src="data.js"></script>
+<script src="app.js"></script>
 <script>
-function setCur(c){
-  document.body.dataset.cur=c;
-  document.getElementById('btnMXN').classList.toggle('act',c==='mxn');
-  document.getElementById('btnUSD').classList.toggle('act',c==='usd');
-}
-document.getElementById('rankFilters').addEventListener('click',e=>{
-  if(e.target.tagName!=='BUTTON')return;
-  [...document.querySelectorAll('#rankFilters button')].forEach(b=>b.classList.remove('act'));
-  e.target.classList.add('act');
-  const f=e.target.dataset.f;
-  document.querySelectorAll('#rankTable tbody tr').forEach(tr=>{
-    tr.classList.toggle('hid', f!=='all' && !(tr.dataset.f||'').split(' ').includes(f));
-  });
-});
-const V=[
- {id:"DvEiyOOUMKE",cat:"comp",t:"Top 9 Adults-Only All Inclusive Resorts In Cancun 2025",c:"Details in Luxury · EN",d:"El filtro más relevante para pareja: solo adultos, solo Cancún."},
- {id:"-m43vQgpVMU",cat:"comp",t:"Best Adults All Inclusive Resorts in Cancun — Ranked by Category",c:"3 Days 3 Noches · EN",d:"Ranking por categorías (playa, comida, ambiente) en vez de un top plano."},
- {id:"6qu5r_Hsx2E",cat:"comp",t:"Best Adults-Only Resorts in Cancun/Riviera Maya (Honest Ranking)",c:"New Travel Escapes · EN",d:"Pareja que visitó lo que compara; cubre ambas zonas."},
- {id:"ko9nDd3LDsc",cat:"comp",t:"2026 | 7 BEST All-Inclusive Resorts in Riviera Cancun",c:"Luxscape · EN",d:"La lista más fresca, etiquetada 2026."},
- {id:"eV5EOpG9P-8",cat:"comp",t:"Top 10 Best All-Inclusive Resorts in Riviera Maya 2025",c:"Rest & Roam · EN",d:"El panorama completo de la Riviera con criterios consistentes."},
- {id:"5ZTdz9q6XyA",cat:"comp",t:"Top 10 Hoteles Todo Incluido en Cancún",c:"Turimexico · ES",d:"La mirada mexicana del lujo en Cancún, en español."},
- {id:"s80a0NBf6JA",cat:"comp",t:"Los 10 Mejores hoteles de lujo todo incluido en la Riviera Maya",c:"Hoteles de Lujo · ES",d:"Top de lujo de la Riviera en español."},
- {id:"qrcZ52BTTdA",cat:"hotel",t:"Excellence Riviera Cancún 2025 — A Review You Can Trust",c:"Royal Retreats · EN",d:"El #1 de Puerto Morelos, a 25 min del aeropuerto."},
- {id:"3AwYuTQWCQk",cat:"hotel",t:"Hyatt Zilara Cancun All-Inclusive Resort | Honest Review & Full Tour 2025",c:"TravelTime · EN",d:"El Zilara antes de su renovación: útil para el antes y después."},
- {id:"HiIrwI1KwjU",cat:"hotel",t:"The BRAND NEW Hyatt Zilara Cancun! Full Review after the Renovation",c:"HeatherTravelsXO · EN",d:"El producto renovado que estrenó en mayo de 2026."},
- {id:"9KnIygyWVWA",cat:"hotel",t:"Hyatt Zilara Cancún Reopened 2026: Is It Actually Better?",c:"Top Luxury Hotels · EN",d:"La pregunta directa sobre si la renovación valió la pena."},
- {id:"1d1mu5MA9EQ",cat:"hotel",t:"Live Aqua Cancun Resort — HONEST REVIEW & TOUR 2026",c:"The Tourist Blueprint · EN",d:"El zen de la Zona Hotelera, con La Isla enfrente."},
- {id:"vEI3VkKOIBo",cat:"hotel",t:"Live Aqua Beach Resort Cancun 2025 | HONEST Review & Full Tour",c:"Luxscape · EN",d:"Segunda opinión del Live Aqua."},
- {id:"P0HmVe8pVdM",cat:"hotel",t:"Secrets The Vine Cancun Full Tour & Honest Review 2026 | Is It Worth It?",c:"TravelFinanceAdvisor · EN",d:"El debate calidad-precio del céntrico de Km 14.5."},
- {id:"M8R6txpO-ts",cat:"hotel",t:"Le Blanc Spa Resort Cancun Full Tour & Review",c:"TravelFinanceAdvisor · EN",d:"El 5 Diamantes examinado: ¿justifica su precio?"},
- {id:"TQj_U2oD0Kw",cat:"hotel",t:"Le Blanc Spa Resort Cancún | Hotel 5 Diamantes | Solo Adultos | Review 2025",c:"X el mundo · ES",d:"La misma referencia de lujo, en español."},
- {id:"aXaxvU0GNAI",cat:"hotel",t:"Excellence Playa Mujeres — Full Tour 2025 (+ Review)",c:"Royal Retreats · EN",d:"El mejor resort 'puro' del Caribe mexicano por dentro."},
- {id:"-vdyuE4Hbkg",cat:"hotel",t:"ATELIER Playa Mujeres — Review 2025",c:"Royal Retreats · EN",d:"El lujo mexicano contemporáneo de Playa Mujeres."},
- {id:"E9avESgb7WE",cat:"hotel",t:"Impression Isla Mujeres by Secrets — REVIEW + Full Tour!",c:"Betterment Travel · EN",d:"El ultra-lujo de la isla con catamarán privado."},
- {id:"eu9V54FHshQ",cat:"hotel",t:"Impression Isla Mujeres By Secrets Review 2025 | Luxury Adults-Only Resort",c:"TripTalesToday · EN",d:"Segunda opinión del boutique de Isla Mujeres."},
- {id:"gaSwLrayHLo",cat:"hotel",t:"Secrets Maroma Beach — In-depth Tour & Honest Review",c:"Royal Retreats · EN",d:"El resort de la que probablemente es la mejor playa de México."},
- {id:"vZcTD5xX3xQ",cat:"hotel",t:"UNICO 20°87° — The Resort That Blew Us Away",c:"All Inclusive Reviews · EN",d:"El lifestyle-lujo de la Riviera."},
- {id:"rAV-sFnhJnE",cat:"hotel",t:"Secrets Aura — Why it's The #1 Resort in Cozumel",c:"Coolist · EN",d:"Para calibrar el techo real de Cozumel frente al continente."},
-];
-function renderVideos(cat){
-  const g=document.getElementById('vgrid'); g.innerHTML='';
-  V.filter(v=>cat==='all'||v.cat===cat).forEach(v=>{
-    const a=document.createElement('a');
-    a.className='vid'; a.href='https://www.youtube.com/watch?v='+v.id; a.target='_blank'; a.rel='noopener';
-    a.innerHTML='<div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/'+v.id+'/hqdefault.jpg" alt="'+v.t.replace(/"/g,'&quot;')+'" onerror="this.remove()"><div class="play"><i></i></div></div>'
-      +'<div class="b"><p class="c">'+v.c+'</p><p class="t">'+v.t+'</p><p class="d">'+v.d+'</p></div>';
-    g.appendChild(a);
-  });
-}
-document.getElementById('vtabs').addEventListener('click',e=>{
-  if(e.target.tagName!=='BUTTON')return;
-  [...document.querySelectorAll('#vtabs button')].forEach(b=>b.classList.remove('act'));
-  e.target.classList.add('act');
-  renderVideos(e.target.dataset.cat);
-});
-renderVideos('all');
+renderHotels('mxAdultos','mx','adultos');
+renderHotels('mxFamiliar','mx','familiar');
 </script>
 </body></html>
