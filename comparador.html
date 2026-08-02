@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>El Comparador · ¿Cuál hotel? · Punta Cana vs Cancún vs Islas · 29 dic – 2 ene</title>
+<meta name="description" content="Comparador costo-beneficio de hoteles todo incluido solo adultos: Punta Cana, Cancún, Isla Mujeres y Cozumel. Scorecard con pesos ajustables: comida, playa, albercas, centricidad, fiesta y descanso.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--sand:#f7f2ea;--card:#ffffff;--deep:#0b3d4c;--deep2:#072a35;--teal:#0e7c86;--tealviz:#0092ad;
+--gold:#c9922b;--goldviz:#b57f19;--coral:#e2614a;--ink:#1c2529;--muted:#697680;--line:#e6dfd2;
+--ok:#0a6b52;--okbg:#dff5ef;--nobg:#fde5e0;--no:#a8331d;--warnbg:#fdf0d5;--warn:#8a6412;--newbg:#e3eefb;--new:#1c5cab;
+color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--sand);line-height:1.62;font-size:15.5px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+h1,h2,h3,.serif{font-family:Fraunces,Georgia,"Times New Roman",serif}
+a{color:var(--teal)}
+nav.top{position:sticky;top:0;z-index:50;background:rgba(7,42,53,.92);backdrop-filter:blur(8px);color:#fff;box-shadow:0 2px 14px rgba(7,42,53,.25)}
+nav.top .in{max-width:1120px;margin:0 auto;padding:10px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+nav.top .brand{font-weight:700;font-size:.95rem;white-space:nowrap}
+nav.top .brand span{color:#ffd98a}
+.dest{display:flex;border:1px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden;font-size:.78rem}
+.dest a{color:#cfe3e7;text-decoration:none;padding:5px 12px;font-weight:600}
+.dest a.act{background:#ffd98a;color:#4a3403}
+nav.top .links{display:flex;gap:2px;flex-wrap:wrap;flex:1}
+nav.top .links a{color:#dbe9ec;text-decoration:none;font-size:.8rem;padding:6px 9px;border-radius:8px;white-space:nowrap}
+nav.top .links a:hover{background:rgba(255,255,255,.12);color:#fff}
+header.hero{background:radial-gradient(1100px 500px at 85% -10%,rgba(18,163,163,.55),transparent 60%),radial-gradient(900px 420px at -10% 110%,rgba(201,146,43,.35),transparent 55%),linear-gradient(135deg,#072a35 0%,#0b3d4c 45%,#0e7c86 100%);color:#fff;padding:60px 22px 50px;text-align:center}
+header.hero h1{margin:0 auto 12px;font-size:clamp(1.9rem,4.4vw,2.9rem);line-height:1.12;max-width:980px}
+header.hero h1 em{font-style:normal;color:#ffd98a}
+header.hero p.sub{margin:0 auto;max-width:880px;opacity:.93;font-size:1.01rem}
+.chips{margin-top:22px;display:flex;flex-wrap:wrap;gap:9px;justify-content:center}
+.chip{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.3);padding:6px 14px;border-radius:999px;font-size:.83rem}
+section{padding:8px 0}
+.kicker{display:inline-block;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:44px 0 4px}
+h2{font-size:1.7rem;margin:0 0 8px;color:var(--deep)}
+h3{font-size:1.13rem;margin:22px 0 8px;color:var(--deep)}
+p.lead{color:var(--muted);margin:0 0 16px;max-width:72ch}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:16px 0;box-shadow:0 1px 3px rgba(11,61,76,.05)}
+.alert{border-left:5px solid var(--coral);background:#fff5f3}
+.note{border-left:5px solid var(--gold);background:#fffaf0}
+.win{border-left:5px solid var(--teal);background:#f0fbfb}
+.grid2{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.grid3{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.tblwrap{overflow-x:auto;border-radius:12px;border:1px solid var(--line);margin:12px 0;background:#fff}
+table{width:100%;border-collapse:collapse;font-size:.88rem;background:#fff;min-width:760px}
+th,td{padding:9px 11px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--deep);color:#fff;font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em}
+tbody tr:nth-child(even){background:#fbf9f5}
+td.num,th.num{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:600;vertical-align:middle}
+.ok{background:var(--okbg);color:var(--ok)} .no{background:var(--nobg);color:var(--no)}
+.warn{background:var(--warnbg);color:var(--warn)} .best{background:var(--gold);color:#fff} .new{background:var(--newbg);color:var(--new)}
+.small{font-size:.84rem;color:var(--muted)}
+blockquote{margin:8px 0;padding:8px 14px;border-left:3px solid var(--line);color:#3d4750;font-size:.88rem;font-style:italic;background:#fbf9f5;border-radius:0 8px 8px 0}
+/* podio */
+.podio{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.pcard{background:#fff;border:2px solid var(--line);border-radius:18px;padding:22px 24px;position:relative}
+.pcard.first{border-color:var(--gold);box-shadow:0 8px 30px rgba(201,146,43,.18)}
+.pcard .rank{position:absolute;top:-14px;left:20px;background:var(--deep);color:#fff;border-radius:999px;padding:4px 14px;font-weight:700;font-size:.8rem}
+.pcard.first .rank{background:var(--gold)}
+.pcard h3{margin:6px 0 2px}
+.pcard .z{font-size:.8rem;color:var(--muted);margin-bottom:8px}
+.pcard .precio{font-family:Fraunces,Georgia,serif;font-size:1.25rem;font-weight:700;color:var(--deep);margin:6px 0}
+/* comparador interactivo */
+.mixer{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 24px;margin:16px 0}
+.presets{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.presets button{border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 15px;font-size:.8rem;cursor:pointer;font-weight:600;color:var(--deep)}
+.presets button.act{background:var(--deep);border-color:var(--deep);color:#fff}
+.sliders{display:grid;gap:10px 22px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));margin-bottom:8px}
+.sl{display:grid;grid-template-columns:112px 1fr 34px;align-items:center;gap:8px;font-size:.8rem}
+.sl input{accent-color:var(--teal);width:100%}
+.sl b{font-variant-numeric:tabular-nums;text-align:right;color:var(--teal)}
+.rrow{display:grid;grid-template-columns:26px 210px 1fr 46px;align-items:center;gap:10px;margin:6px 0}
+.rrow .pos{font-weight:700;color:var(--muted);font-variant-numeric:tabular-nums;font-size:.85rem}
+.rrow .rname{font-size:.85rem;line-height:1.2;text-align:right}
+.rrow .rname .z{display:block;font-size:.68rem;color:var(--muted)}
+.rtrack{position:relative;height:16px;background:#f1ede4;border-radius:4px;overflow:hidden}
+.rbar{position:absolute;top:0;bottom:0;left:0;border-radius:4px;background:var(--tealviz);transition:width .3s}
+.rrow.first .rbar{background:var(--goldviz)}
+.rscore{font-weight:700;font-variant-numeric:tabular-nums;font-size:.86rem;color:var(--deep)}
+@media(max-width:640px){.rrow{grid-template-columns:20px 120px 1fr 40px}}
+/* fichas */
+.hcard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin:16px 0;box-shadow:0 1px 3px rgba(11,61,76,.05)}
+.hcard h3{margin:0 0 2px;font-size:1.22rem}
+.hcard .meta{font-size:.8rem;color:var(--muted);margin-bottom:10px}
+.scores{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.scorepill{background:#faf7f1;border:1px solid var(--line);border-radius:999px;padding:3px 11px;font-size:.74rem}
+.scorepill b{color:var(--teal)}
+.vthumbs{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.vth{display:flex;gap:8px;align-items:center;text-decoration:none;color:inherit;background:#faf7f1;border:1px solid var(--line);border-radius:10px;padding:6px 10px 6px 6px;max-width:330px;transition:transform .15s,box-shadow .15s}
+.vth:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(11,61,76,.14)}
+.vth img{width:88px;aspect-ratio:16/9;object-fit:cover;border-radius:6px;background:linear-gradient(135deg,#0b3d4c,#0e7c86)}
+.vth span{font-size:.74rem;line-height:1.25}
+footer{text-align:center;color:var(--muted);font-size:.84rem;padding:36px 22px;border-top:1px solid var(--line);margin-top:52px;background:#fbf8f2}
+.mxn,.usd{font-variant-numeric:tabular-nums}
+body[data-cur="mxn"] .usd{display:none}
+body[data-cur="usd"] .mxn{display:none}
+.curswitch{display:flex;border:1px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden;font-size:.78rem}
+.curswitch button{background:transparent;border:0;color:#cfe3e7;padding:5px 12px;cursor:pointer;font-weight:600}
+.curswitch button.act{background:#ffd98a;color:#4a3403}
+@media print{nav.top,.presets,.sliders{display:none}body{background:#fff}}
+</style></head>
+<body data-cur="mxn">
+
+<nav class="top"><div class="in">
+<div class="brand">Fin de Año <span>26·27</span></div>
+<div class="dest"><a href="index.html">Punta Cana</a><a href="mexico.html">Caribe Mexicano</a><a class="act" href="comparador.html">★ Comparador</a></div>
+<div class="links">
+<a href="#podio">Podio</a><a href="#mixer">Tu ranking</a><a href="#scorecard">Scorecard</a><a href="#fichas">Fichas</a><a href="#descartes">Descartes</a><a href="#metodo">Método</a>
+</div>
+<div class="curswitch"><button id="btnMXN" class="act" onclick="setCur('mxn')">MXN</button><button id="btnUSD" onclick="setCur('usd')">USD</button></div>
+</div></nav>
+
+<header class="hero">
+<h1>¿Cuál hotel? <em>El comparador definitivo</em><br>Punta Cana · Cancún · Islas</h1>
+<p class="sub">15 finalistas todo incluido <b>solo adultos</b>, calificados en 8 criterios con tu brief: costo-beneficio, buena comida, buena playa, albercas y pool bar, mejores opiniones, fácil llegada, fiesta disponible pero con descanso — y céntrico, cerca de la civilización. Mueve los pesos y el ranking se rehace en vivo.</p>
+<div class="chips">
+<span class="chip">29 dic 2026 → 2 ene 2027 · 4 noches</span>
+<span class="chip">2 adultos · Solo adultos · All inclusive</span>
+<span class="chip">Opiniones y videos revisados a detalle</span>
+<span class="chip">Datos: 2 ago 2026 · 1 USD ≈ 17.35 MXN</span>
+</div>
+</header>
+
+<div class="wrap">
+
+<div class="card note" style="margin-top:26px"><b>Tu brief, traducido a números.</b> Cada hotel tiene nota 0-10 en 8 criterios, alimentadas por las tres rondas de investigación (reseñas 2025-26 leídas a detalle con citas textuales, ~50 videos de YouTube verificados, playas con datos de invierno, traslados reales y precios estimados con recargo festivo documentado). El criterio <b>Costo</b> usa el <b>viaje completo desde CDMX</b> (hotel + vuelos 2 personas + traslados), para comparar justo Punta Cana contra México. El criterio <b>Céntrico</b> es nuevo, a tu pedido: mide qué tan cerca está la "civilización" (plazas, farmacias, restaurantes externos, vida) y cómo se sale (a pie / taxi / lancha). Y sí — el <b>Grand Palladium que preguntaste ya está dentro</b>: su torre solo-adultos TRS Turquesa resultó tan buena bajo este brief que entró directo al podio de Punta Cana. Nota: los precios son estimaciones, verifica en el motor de reservas.</div>
+
+<section id="podio">
+<span class="kicker">01 · El veredicto con tu brief</span>
+<h2>El podio</h2>
+<div class="podio">
+<div class="pcard first"><span class="rank">🥇 Ganador del brief</span>
+<h3>Hyatt Zilara Cancún</h3><div class="z">Cancún Zona Hotelera Km 11.5 · TA 4.7 · renovación integral estrenada en mayo 2026</div>
+<div class="precio"><span class="mxn">MXN 65,900–83,300</span><span class="usd">USD 3,800–4,800</span> <span class="small">hotel 4 noches</span></div>
+La combinación más completa de los 8 criterios: hotel prácticamente <b>nuevo</b> (310 suites, 12 restaurantes y spa recién estrenados — "we did not have a bad meal", jun 2026), <b>2 albercas climatizadas</b> separadas en activa (foam party, DJ) y tranquila con swim-up bar Tides, la playa más ancha de la Zona Hotelera, y Plaza Flamingo cruzando la calle con La Isla a 12 min a pie. Fiesta de día, calma de noche, y los clubs de Cancún a 10 min si quieren rematar. Contras honestos: upselling insistente, camastros justos, y pagas el estreno (dic +110%).</div>
+<div class="pcard"><span class="rank">🥈 El más céntrico y zen</span>
+<h3>Live Aqua Beach Resort</h3><div class="z">Cancún ZH Km 12.5 · TA 4.7 · #5 de Cancún</div>
+<div class="precio"><span class="mxn">MXN 59,000–72,900</span><span class="usd">USD 3,400–4,200</span> <span class="small">hotel 4 noches</span></div>
+El único donde "salir caminando a la civilización" es literal: <b>La Isla Shopping Village enfrente</b> (57 restaurantes en 500 m, farmacia, cine, acuario). 7-8 albercas a distintas temperaturas (templadas todo el año), Aka swim-up bar, y la mejor dupla gastronómica de la ZH según reseñas (buffet Siete + MB). Su carácter es zen — la fiesta interna es suave y muere temprano; el plan es descanso adentro y noche afuera en taxi de 8 min. Contras: upsell al check-in, camastros de madrugadores, y algún lapso de servicio reportado por repetidores.</div>
+<div class="pcard"><span class="rank">🥉 El costo-beneficio céntrico</span>
+<h3>TRS Turquesa <span class="tag new">El Palladium que preguntaste</span></h3><div class="z">Punta Cana · complejo Grand Palladium, pegado a El Cortecito · TA 4.5 (20,600 reseñas)</div>
+<div class="precio"><span class="mxn">MXN 36,500–50,300</span><span class="usd">USD 2,100–2,900</span> <span class="small">hotel 4 noches</span></div>
+Entró al análisis por tu observación — y se ganó el podio: burbuja solo-adultos con mayordomo dentro de un complejo con <b>40+ restaurantes y bares incluidos</b> (La Bohème, Kusko nikkei, Helios), swim-up bar propio + 6 albercas del complejo + alberca nocturna "The Secret", White Party en la playa, y la mejor centricidad de Bávaro junto al Barceló: El Cortecito al lado. Nochevieja de complejo con langosta, champán y fuegos. Contras: habitaciones con desgaste reportado en 2025 ("a bit tired and worn"), playa buena pero estrecha en su franja (7/10) y servicio tipo lotería en picos.</div>
+</div>
+<div class="grid2">
+<div class="card win"><b>El rey del precio absoluto sigue siendo Barceló Bávaro Beach</b> (<span class="mxn">MXN 23,600–34,700</span><span class="usd">USD 1,360–2,000</span> las 4 noches; viaje completo ~<span class="mxn">MXN 41-63 mil</span><span class="usd">USD 2,350-3,650</span>): playa 9/10, céntrico hacia El Cortecito y Jellyfish caminando por la arena, casino y disco en el complejo. Pero tu brief le pega justo donde cojea: comida irregular ("nothing we ate was particularly good", jul 2026) y habitaciones viejas con quejas duras 2026. Si el costo manda sobre todo lo demás, es él; si comida+albercas+frescura pesan, los tres del podio lo superan.</div>
+<div class="card"><b>Menciones de honor.</b> <b>Excellence Playa Mujeres</b> empata en puntos con The Vine y el podio — el mejor resort "puro" del estudio (albercas climatizadas + lazy river, comida 8.5, dos caras perfectas) — pero tu criterio céntrico lo baja: es un enclave sin nada caminable. <b>Secrets The Vine</b> es el valor céntrico de Cancún (fine dining en su banqueta: Porfirio's, Harry's, Rosa Negra) pero sin swim-up bar, con habitaciones cansadas y — ojo — las reseñas de diciembre 2025/enero 2026 reportan saturación justo en tus fechas. <b>Impression Isla Mujeres</b> tiene las mejores opiniones absolutas ("12/10") y el pueblo a 10-15 min en golf cart, pero cuesta el doble que el podio y su llegada depende del catamarán (los nortes de diciembre a veces lo cancelan, documentado).</div>
+</div>
+</section>
+
+<section id="mixer">
+<span class="kicker">02 · Interactivo</span>
+<h2>Arma tu propio ranking</h2>
+<p class="lead">Estos son los pesos de tu brief. Muévelos (o usa un preset) y mira cómo cambia el orden. Los pesos se normalizan solos.</p>
+<div class="mixer">
+<div class="presets" id="presets">
+<button class="act" data-p="brief">Tu brief</button>
+<button data-p="ahorro">Máximo ahorro</button>
+<button data-p="centrico">Céntrico total</button>
+<button data-p="foodie">Comida primero</button>
+<button data-p="playa">Playa primero</button>
+<button data-p="relax">Puro descanso</button>
+</div>
+<div class="sliders" id="sliders"></div>
+<div id="ranking" style="margin-top:14px"></div>
+<p class="small" style="margin-bottom:0">Barra dorada = líder con los pesos actuales. El puntaje es el promedio ponderado de las 8 notas (0-10).</p>
+</div>
+</section>
+
+<section id="scorecard">
+<span class="kicker">03 · Los números</span>
+<h2>Scorecard completo</h2>
+<div class="tblwrap"><table>
+<thead><tr><th>Hotel</th><th>Zona</th><th class="num">Costo*</th><th class="num">Opiniones</th><th class="num">Playa</th><th class="num">Comida</th><th class="num">Céntrico</th><th class="num">Albercas</th><th class="num">Fiesta+Relax</th><th class="num">Llegada</th><th class="num">Hotel 4 noches</th></tr></thead>
+<tbody id="scoreBody"></tbody>
+</table></div>
+<p class="small">*Costo = nota del costo TOTAL del viaje desde CDMX (hotel + vuelos 2 pax + traslados): 10 ≈ MXN 50 mil totales, 1.5 ≈ MXN 126 mil. "Opiniones" pondera nota TripAdvisor, ranking en su zona, volumen y tendencia 2025-26. "Albercas" premia climatización en invierno, separación activa/tranquila y swim-up bar. "Céntrico": 10 = civilización caminando; 2-3 = enclave. Detalle de cada nota en las fichas y en las páginas de <a href="index.html">Punta Cana</a> y <a href="mexico.html">México</a>.</p>
+</section>
+
+<section id="fichas">
+<span class="kicker">04 · Con citas textuales y videos</span>
+<h2>Los siete que importan, a detalle</h2>
+
+<div class="hcard">
+<h3>🥇 Hyatt Zilara Cancún</h3>
+<div class="meta">Cancún ZH Km 11.5 · solo adultos · renovado may 2026 · viaje completo est. <span class="mxn">MXN 77–98 mil</span><span class="usd">USD 4,450–5,650</span></div>
+<div class="scores"><span class="scorepill">Costo <b>6.0</b></span><span class="scorepill">Opiniones <b>9.0</b></span><span class="scorepill">Playa <b>6.0</b></span><span class="scorepill">Comida <b>8.5</b></span><span class="scorepill">Céntrico <b>9.0</b></span><span class="scorepill">Albercas <b>9.0</b></span><span class="scorepill">Fiesta+Relax <b>8.5</b></span><span class="scorepill">Llegada <b>10</b></span></div>
+<blockquote>"The staff made us feel welcome and went above and beyond… we did not have a bad meal" — jul/jun 2026, post-renovación</blockquote>
+<blockquote>Queja: "Hotel is constantly trying to upsell… not enough pool chairs for the number of guests" — jul 2026</blockquote>
+<p>Playa más ancha de la ZH (con banderas los días de norte — 6/10 invernal), albercas climatizadas activa/tranquila, Bubba Gump y Plaza Flamingo a 5 min a pie, La Isla a 12. Será su primer fin de año post-renovación: producto de estreno, precio de estreno.</p>
+<div class="vthumbs">
+<a class="vth" href="https://www.youtube.com/watch?v=HiIrwI1KwjU" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/HiIrwI1KwjU/mqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><span><b>POST-renovación:</b> "The BRAND NEW Hyatt Zilara Cancun!" — HeatherTravelsXO</span></a>
+<a class="vth" href="https://www.youtube.com/watch?v=9KnIygyWVWA" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/9KnIygyWVWA/mqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><span>"Reopened 2026: Is It Actually Better?" — Top Luxury Hotels</span></a>
+</div>
+</div>
+
+<div class="hcard">
+<h3>🥈 Live Aqua Beach Resort Cancún</h3>
+<div class="meta">Cancún ZH Km 12.5 · solo adultos · viaje completo est. <span class="mxn">MXN 70–88 mil</span><span class="usd">USD 4,050–5,050</span></div>
+<div class="scores"><span class="scorepill">Costo <b>6.9</b></span><span class="scorepill">Opiniones <b>9.0</b></span><span class="scorepill">Playa <b>5.5</b></span><span class="scorepill">Comida <b>8.5</b></span><span class="scorepill">Céntrico <b>9.5</b></span><span class="scorepill">Albercas <b>8.5</b></span><span class="scorepill">Fiesta+Relax <b>6.5</b></span><span class="scorepill">Llegada <b>10</b></span></div>
+<blockquote>"MB restaurant is amazing. Best soup I have ever had" — jul 2026 · "Food comparable to 5-star restaurants in the US" — may 2026</blockquote>
+<blockquote>Queja: "We had been offered a butler… he never showed up" — jul 2026 · torre de camastros a las 7 am</blockquote>
+<p>El más céntrico del estudio: La Isla enfrente. 7-8 albercas a distintas temperaturas (templadas en invierno), Aka swim-up bar, vibra zen sin equipo de animación a gritos. Para la fiesta: taxi de 8-10 min al nodo Coco Bongo. Playa linda del tramo este: banderas cuando sopla.</p>
+<div class="vthumbs">
+<a class="vth" href="https://www.youtube.com/watch?v=1d1mu5MA9EQ" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/1d1mu5MA9EQ/mqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><span><b>2026:</b> "Honest Review & Tour" — The Tourist Blueprint</span></a>
+<a class="vth" href="https://www.youtube.com/watch?v=vEI3VkKOIBo" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/vEI3VkKOIBo/mqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><span>"HONEST Review & Full Tour 2025" — Luxscape</span></a>
+</div>
+</div>
+
+<div class="hcard">
+<h3>🥉 TRS Turquesa (Grand Palladium Punta Cana)</h3>
+<div class="meta">Bávaro, pegado a El Cortecito · solo adultos con mayordomo · viaje completo est. <span class="mxn">MXN 58–72 mil</span><span class="usd">USD 3,350–4,150</span></div>
+<div class="scores"><span class="scorepill">Costo <b>8.4</b></span><span class="scorepill">Opiniones <b>7.5</b></span><span class="scorepill">Playa <b>7.0</b></span><span class="scorepill">Comida <b>8.0</b></span><span class="scorepill">Céntrico <b>9.0</b></span><span class="scorepill">Albercas <b>8.0</b></span><span class="scorepill">Fiesta+Relax <b>8.0</b></span><span class="scorepill">Llegada <b>6.0</b></span></div>
+<blockquote>"Staff were fabulous, kind and helpful at all times… beautiful place, clean, great food and drinks" — 2025</blockquote>
+<blockquote>Queja: "Rooms are a bit tired and worn" — mar 2025 · "leaky toilet, loud air conditioning" — jun 2025</blockquote>
+<p>El complejo está "smack dab in the middle of El Cortecito": restaurantes externos, tiendas y Uber de Bávaro al alcance. 40+ venues incluidos (La Bohème francés, Kusko nikkei, Helios beach club), swim-up bar + 6 albercas + "The Secret" nocturna, White Party semanal, teatro y casino. Nochevieja del complejo con langosta, champán y fuegos (tradición documentada — confirmar programa 2026-27). Pedir habitación renovada/piso alto.</p>
+<div class="vthumbs">
+<a class="vth" href="https://www.youtube.com/watch?v=dxuOFZO0qmg" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/dxuOFZO0qmg/mqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><span>Su gemelo mexicano examinado: "TRS — Is It Worth It?" — New Travel Escapes (los pros/contras de la marca aplican)</span></a>
+</div>
+</div>
+
+<div class="hcard">
+<h3>4 · Secrets The Vine Cancún</h3>
+<div class="meta">Cancún ZH Km 14.5 · solo adultos · viaje completo est. <span class="mxn">MXN 56–71 mil</span><span class="usd">USD 3,250–4,100</span></div>
+<div class="scores"><span class="scorepill">Costo <b>8.5</b></span><span class="scorepill">Opiniones <b>7.5</b></span><span class="scorepill">Playa <b>5.5</b></span><span class="scorepill">Comida <b>8.0</b></span><span class="scorepill">Céntrico <b>9.5</b></span><span class="scorepill">Albercas <b>7.5</b></span><span class="scorepill">Fiesta+Relax <b>7.0</b></span><span class="scorepill">Llegada <b>10</b></span></div>
+<blockquote>"The food at EVERY SINGLE RESTAURANT was amazing" — may 2026 · fine dining externo en su cuadra (Porfirio's, Harry's, Rosa Negra)</blockquote>
+<blockquote>Ojo con tus fechas: dic 2025/ene 2026 reportaron saturación — "rooms are looking very tired… wait time of at least an hour"</blockquote>
+<p>El mejor precio de Cancún ZH y walkability 88/100 — pero es el único sin swim-up bar, y su historial reciente justo en fin de año es el más flojo de los cuatro de Cancún. Compra de valor si toleran operación imperfecta en pico.</p>
+<div class="vthumbs">
+<a class="vth" href="https://www.youtube.com/watch?v=P0HmVe8pVdM" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/P0HmVe8pVdM/mqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><span><b>2026:</b> "Full Tour & Honest Review — Is It Worth It?" — TravelFinanceAdvisor</span></a>
+</div>
+</div>
+
+<div class="hcard">
+<h3>5 · Excellence Playa Mujeres</h3>
+<div class="meta">Playa Mujeres (enclave) · solo adultos · viaje completo est. <span class="mxn">MXN 67–85 mil</span><span class="usd">USD 3,850–4,900</span></div>
+<div class="scores"><span class="scorepill">Costo <b>7.3</b></span><span class="scorepill">Opiniones <b>9.5</b></span><span class="scorepill">Playa <b>8.0</b></span><span class="scorepill">Comida <b>8.5</b></span><span class="scorepill">Céntrico <b>3.0</b></span><span class="scorepill">Albercas <b>9.5</b></span><span class="scorepill">Fiesta+Relax <b>8.5</b></span><span class="scorepill">Llegada <b>8.5</b></span></div>
+<blockquote>"A fun vibe without ever feeling rowdy" — 7 albercas (4-5 climatizadas) + lazy river + 9 jacuzzis; alberca-fiesta con DJ Y cinco de silencio</blockquote>
+<p>El mejor resort "puro" del estudio y ganador si el criterio céntrico no existiera. Como enclave, todo pasa adentro — y adentro está casi todo: Basmati/Chez Isabelle/Agave sin reserva, playa calmada 8/10, show nocturno diario. Pedir edificio ya renovado (obra por fases 2025-26).</p>
+<div class="vthumbs">
+<a class="vth" href="https://www.youtube.com/watch?v=aXaxvU0GNAI" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/aXaxvU0GNAI/mqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><span>"A FULL Tour 2025 (+ Review)" — Royal Retreats</span></a>
+</div>
+</div>
+
+<div class="hcard">
+<h3>6 · Barceló Bávaro Beach (Adults Only)</h3>
+<div class="meta">Bávaro, Punta Cana · solo adultos (edificio) · viaje completo est. <span class="mxn">MXN 41–63 mil</span><span class="usd">USD 2,350–3,650</span></div>
+<div class="scores"><span class="scorepill">Costo <b>9.9</b></span><span class="scorepill">Opiniones <b>7.0</b></span><span class="scorepill">Playa <b>9.0</b></span><span class="scorepill">Comida <b>6.5</b></span><span class="scorepill">Céntrico <b>8.0</b></span><span class="scorepill">Albercas <b>6.0</b></span><span class="scorepill">Fiesta+Relax <b>6.5</b></span><span class="scorepill">Llegada <b>6.0</b></span></div>
+<blockquote>"This resort is definitely good for the price. Gives you everything you could want/need" — jul 2026 · playa "among the 10 best in the world"</blockquote>
+<blockquote>Queja: "The furniture looks old, the bedroom is worn out… nothing we ate was particularly good" — jun/jul 2026</blockquote>
+<p>El costo total más bajo del estudio con la mejor playa nadable (9/10). Jellyfish a 10 min a pie por la arena, El Cortecito a 5 en taxi, casino y disco del complejo. Su alberca es una sola (6/10, sin swim-up real) y la comida propia es limitada — por eso, con TU brief, baja del trono que tenía en el análisis de Nochevieja. Subir a Premium Level mitiga el tema habitación.</p>
+<div class="vthumbs">
+<a class="vth" href="https://www.youtube.com/watch?v=FAaLQmwBVpU" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/FAaLQmwBVpU/mqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><span><b>Nuevo:</b> "Adults-Only Luxury Resort in Punta Cana" — TripTalesToday</span></a>
+<a class="vth" href="https://www.youtube.com/watch?v=Buk9z2DMji0" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/Buk9z2DMji0/mqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><span>"El mejor HOTEL SOLO ADULTOS… Review 4K" — Así se viaja (ES)</span></a>
+</div>
+</div>
+
+<div class="hcard">
+<h3>7 · Impression Isla Mujeres by Secrets</h3>
+<div class="meta">Isla Mujeres (Sac Bajo) · solo adultos boutique · viaje completo est. <span class="mxn">MXN 109–144 mil</span><span class="usd">USD 6,300–8,300</span></div>
+<div class="scores"><span class="scorepill">Costo <b>1.5</b></span><span class="scorepill">Opiniones <b>9.5</b></span><span class="scorepill">Playa <b>8.5</b></span><span class="scorepill">Comida <b>8.5</b></span><span class="scorepill">Céntrico <b>6.0</b></span><span class="scorepill">Albercas <b>8.5</b></span><span class="scorepill">Fiesta+Relax <b>8.0</b></span><span class="scorepill">Llegada <b>7.0</b></span></div>
+<blockquote>"Food, drinks, hotel cleanliness were all 12/10 and super luxurious" — jul 2026 · "They anticipated our needs before we even voiced them" — abr 2026</blockquote>
+<blockquote>Realidad de diciembre: en dic 2023 el viento obligó a llegar en ferry público en vez del catamarán privado</blockquote>
+<p>Las mejores opiniones del estudio y un balance sorprendente (DJ en rooftop + hidroterapia incluida). El pueblo y Playa Norte a 10-15 min en golf cart: céntrico "a escala isla". Lo saca del podio tu criterio de costo: cuesta el doble que el ganador.</p>
+<div class="vthumbs">
+<a class="vth" href="https://www.youtube.com/watch?v=eu9V54FHshQ" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/eu9V54FHshQ/mqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><span><b>2025:</b> "Luxury Adults-Only Resort in Mexico" — TripTalesToday</span></a>
+<a class="vth" href="https://www.youtube.com/watch?v=E9avESgb7WE" target="_blank" rel="noopener"><img loading="lazy" src="https://i.ytimg.com/vi/E9avESgb7WE/mqdefault.jpg" alt="" onerror="this.style.visibility='hidden'"><span>"REVIEW + Full Tour!" — Betterment Travel</span></a>
+</div>
+</div>
+</section>
+
+<section id="descartes">
+<span class="kicker">05 · Transparencia</span>
+<h2>Los que no, y por qué</h2>
+<div class="grid2">
+<div class="card"><b>Le Blanc Spa Resort (Cancún).</b> La mejor comida (Lumière, reconocido por Wine Spectator 2025) y las mejores albercas climatizadas… al peor precio del continente (<span class="mxn">MXN 80–101 mil</span><span class="usd">USD 4,600–5,800</span> solo hotel). Con tu brief de costo-beneficio queda 6º-8º según los pesos; si algún día el presupuesto es "lo que sea", es él.</div>
+<div class="card"><b>ATELIER y Beloved (Playa Mujeres), JOIA Bávaro, Secrets/Zilara Cap Cana, Breathless.</b> Todos excelentes en su nicho, todos castigados por lo mismo: <b>enclaves sin civilización cerca</b> (céntrico 2-3.5). Además: Cap Cana con albercas SIN climatizar y quejas de agua fría en enero (documentado), Breathless con la comida más floja y 45 min de nada alrededor, Beloved sin cara festiva, y JOIA "just a bit too quiet" con el primer restaurante externo a 2 km.</div>
+<div class="card"><b>Cozumel (Secrets Aura).</b> El único solo-adultos de la isla está en 3.7 de TripAdvisor, a media renovación, a 12 km del pueblo, y llegar implica van + ferry + taxi (o vuelo a CZM). El agua del lado oeste es de las mejores de México — para bucearla en una excursión, no para hospedar este viaje.</div>
+<div class="card"><b>Los que revisamos por tu pregunta del Palladium.</b> <b>Bahía Príncipe Escape Ambar</b>: mismo precio que TRS Turquesa con TA 4.3 (#69), quejas de "club 18-30 feeling" y comida — no compite. <b>Riu Palace Bávaro</b> (renovado 2025): no es solo adultos y su TA agregado (3.9) no acompaña la renovación. La corrección que sí procedía era TRS Turquesa, y ya está en el podio.</div>
+</div>
+</section>
+
+<section id="metodo">
+<span class="kicker">06 · Cierre</span>
+<h2>Método y lectura final</h2>
+<p>Con tu brief completo — costo-beneficio, céntrico, comida, playa, albercas con pool bar, opiniones, fiesta+descanso, solo adultos — la aguja apunta a <b>Cancún Zona Hotelera</b>: es el único lugar del Caribe donde un solo-adultos de 4.7-4.8 convive con plazas, farmacias y 50 restaurantes a distancia caminable, con vuelo nacional de 2 h 20 m. <b>Hyatt Zilara Cancún</b> gana por equilibrio (y por estrenar renovación), <b>Live Aqua</b> si el "céntrico + zen + comida" pesa más que la fiesta interna, y <b>Secrets The Vine</b> si quieren pagar menos aceptando desgaste. En Punta Cana, tu instinto sobre el Palladium era correcto: <b>TRS Turquesa</b> es la mejor combinación céntrico-gastronómica de Bávaro por precio medio, y <b>Barceló Bávaro Beach</b> sigue siendo imbatible en costo total y playa. La isla romántica (<b>Impression</b>) queda para cuando el presupuesto quiera duplicarse.</p>
+<p class="small"><b>Método:</b> notas 0-10 por criterio construidas con: 3 rondas de investigación (ago 1-2, 2026), reseñas 2025-26 leídas a detalle con citas textuales (TripAdvisor, Google, Oyster, Monarc, blogs), ~50 videos de YouTube verificados individualmente vía la API oEmbed, informes de playa/sargazo/nortes de invierno, tablas de traslados reales y precios estimados con el recargo festivo documentado por Kayak para cada hotel (dic/ene +17% a +110% según propiedad). El costo puntúa el viaje completo desde CDMX para 2 personas. Todos los precios son <b>estimaciones</b> — verifica en el motor de reservas. Análisis a fondo por destino: <a href="index.html">Punta Cana</a> · <a href="mexico.html">Caribe Mexicano</a>.</p>
+</section>
+
+</div>
+<footer>El Comparador · Fin de Año 2026-27 · 2 adultos · solo adultos · elaborado el 2 de agosto de 2026 · <a href="index.html">Punta Cana</a> · <a href="mexico.html">Caribe Mexicano</a></footer>
+
+<script>
+function setCur(c){
+  document.body.dataset.cur=c;
+  document.getElementById('btnMXN').classList.toggle('act',c==='mxn');
+  document.getElementById('btnUSD').classList.toggle('act',c==='usd');
+}
+/* criterios y pesos por defecto (tu brief) */
+const CRIT=[
+ {k:'costo',n:'Costo total',w:18},
+ {k:'res',n:'Opiniones',w:16},
+ {k:'playa',n:'Playa',w:14},
+ {k:'comida',n:'Comida',w:14},
+ {k:'cent',n:'Céntrico',w:12},
+ {k:'alb',n:'Albercas',w:10},
+ {k:'fr',n:'Fiesta+Relax',w:10},
+ {k:'lleg',n:'Llegada',w:6},
+];
+const PRESETS={
+ brief:[18,16,14,14,12,10,10,6],
+ ahorro:[35,12,10,10,8,8,8,9],
+ centrico:[12,12,10,12,30,8,8,8],
+ foodie:[12,14,10,30,10,8,10,6],
+ playa:[12,14,30,10,8,10,10,6],
+ relax:[12,16,14,12,6,16,20,4],
+};
+/* notas 0-10; range = hotel 4 noches en miles MXN */
+const H=[
+ {n:"Hyatt Zilara Cancún",z:"Cancún ZH",costo:6.0,res:9.0,playa:6.0,comida:8.5,cent:9.0,alb:9.0,fr:8.5,lleg:10,r:[65.9,83.3]},
+ {n:"Live Aqua Cancún",z:"Cancún ZH",costo:6.9,res:9.0,playa:5.5,comida:8.5,cent:9.5,alb:8.5,fr:6.5,lleg:10,r:[59.0,72.9]},
+ {n:"Le Blanc Spa Resort",z:"Cancún ZH",costo:4.2,res:9.5,playa:5.5,comida:9.5,cent:9.0,alb:9.5,fr:7.5,lleg:10,r:[79.8,100.6]},
+ {n:"Secrets The Vine",z:"Cancún ZH",costo:8.5,res:7.5,playa:5.5,comida:8.0,cent:9.5,alb:7.5,fr:7.0,lleg:10,r:[45.1,59.0]},
+ {n:"Excellence Playa Mujeres",z:"Playa Mujeres",costo:7.3,res:9.5,playa:8.0,comida:8.5,cent:3.0,alb:9.5,fr:8.5,lleg:8.5,r:[55.5,69.4]},
+ {n:"ATELIER Playa Mujeres",z:"Playa Mujeres",costo:7.0,res:9.5,playa:8.0,comida:7.5,cent:3.0,alb:8.5,fr:7.5,lleg:8.5,r:[59.0,74.6]},
+ {n:"Beloved Playa Mujeres",z:"Playa Mujeres",costo:7.9,res:9.5,playa:8.0,comida:8.0,cent:3.0,alb:7.5,fr:5.5,lleg:8.5,r:[52.1,62.5]},
+ {n:"Impression Isla Mujeres",z:"Isla Mujeres",costo:1.5,res:9.5,playa:8.5,comida:8.5,cent:6.0,alb:8.5,fr:8.0,lleg:7.0,r:[97.2,131.9]},
+ {n:"Secrets Aura Cozumel",z:"Cozumel",costo:10,res:4.0,playa:7.0,comida:5.5,cent:4.0,alb:6.0,fr:5.0,lleg:4.0,r:[31.2,41.6]},
+ {n:"Barceló Bávaro Beach",z:"Punta Cana",costo:9.9,res:7.0,playa:9.0,comida:6.5,cent:8.0,alb:6.0,fr:6.5,lleg:6.0,r:[23.6,34.7]},
+ {n:"TRS Turquesa (Palladium)",z:"Punta Cana",costo:8.4,res:7.5,playa:7.0,comida:8.0,cent:9.0,alb:8.0,fr:8.0,lleg:6.0,r:[36.5,50.3]},
+ {n:"JOIA Bávaro",z:"Punta Cana",costo:7.0,res:9.5,playa:8.0,comida:8.5,cent:3.0,alb:8.5,fr:7.5,lleg:5.5,r:[48.6,65.9]},
+ {n:"Breathless Punta Cana",z:"Punta Cana",costo:8.4,res:8.0,playa:5.5,comida:6.5,cent:2.0,alb:7.0,fr:7.0,lleg:4.5,r:[36.1,48.6]},
+ {n:"Secrets Cap Cana",z:"Punta Cana",costo:3.6,res:9.5,playa:9.0,comida:8.0,cent:3.5,alb:7.0,fr:6.5,lleg:6.5,r:[69.4,104.1]},
+ {n:"Hyatt Zilara Cap Cana",z:"Punta Cana",costo:4.4,res:10,playa:9.0,comida:8.5,cent:3.5,alb:7.5,fr:7.0,lleg:6.5,r:[62.5,97.2]},
+];
+const FX=17.35;
+let W=CRIT.map(c=>c.w);
+function buildSliders(){
+  const s=document.getElementById('sliders'); s.innerHTML='';
+  CRIT.forEach((c,i)=>{
+    const d=document.createElement('div'); d.className='sl';
+    d.innerHTML='<span>'+c.n+'</span><input type="range" min="0" max="35" step="1" value="'+W[i]+'" data-i="'+i+'"><b id="wv'+i+'">'+W[i]+'</b>';
+    s.appendChild(d);
+  });
+  s.addEventListener('input',e=>{
+    if(e.target.tagName!=='INPUT')return;
+    W[+e.target.dataset.i]=+e.target.value;
+    document.getElementById('wv'+e.target.dataset.i).textContent=e.target.value;
+    [...document.querySelectorAll('#presets button')].forEach(b=>b.classList.remove('act'));
+    renderRank();
+  });
+}
+function scoreOf(h){
+  const tot=W.reduce((a,b)=>a+b,0)||1;
+  let s=0; CRIT.forEach((c,i)=>{s+=h[c.k]*W[i];});
+  return s/tot;
+}
+function fmtRange(r){
+  if(document.body.dataset.cur==='usd'){
+    return '$'+Math.round(r[0]*1000/FX/10)*10+'–'+Math.round(r[1]*1000/FX/10)*10;
+  }
+  return r[0].toFixed(1)+'–'+r[1].toFixed(1)+'k';
+}
+function renderRank(){
+  const list=H.map(h=>({h,s:scoreOf(h)})).sort((a,b)=>b.s-a.s);
+  const max=list[0].s;
+  const el=document.getElementById('ranking'); el.innerHTML='';
+  list.forEach((x,i)=>{
+    const row=document.createElement('div');
+    row.className='rrow'+(i===0?' first':'');
+    row.innerHTML='<span class="pos">'+(i+1)+'</span>'
+      +'<span class="rname">'+x.h.n+'<span class="z">'+x.h.z+'</span></span>'
+      +'<span class="rtrack"><span class="rbar" style="width:'+(x.s/max*100)+'%"></span></span>'
+      +'<span class="rscore">'+x.s.toFixed(2)+'</span>';
+    el.appendChild(row);
+  });
+}
+document.getElementById('presets').addEventListener('click',e=>{
+  if(e.target.tagName!=='BUTTON')return;
+  [...document.querySelectorAll('#presets button')].forEach(b=>b.classList.remove('act'));
+  e.target.classList.add('act');
+  W=[...PRESETS[e.target.dataset.p]];
+  CRIT.forEach((c,i)=>{
+    const inp=document.querySelector('#sliders input[data-i="'+i+'"]');
+    inp.value=W[i]; document.getElementById('wv'+i).textContent=W[i];
+  });
+  renderRank();
+});
+/* scorecard */
+(function(){
+  const tb=document.getElementById('scoreBody');
+  H.forEach(h=>{
+    const tr=document.createElement('tr');
+    tr.innerHTML='<td><b>'+h.n+'</b></td><td>'+h.z+'</td>'
+      +['costo','res','playa','comida','cent','alb','fr','lleg'].map(k=>'<td class="num">'+h[k].toFixed(1)+'</td>').join('')
+      +'<td class="num"><span class="mxn">'+h.r[0].toFixed(1)+'–'+h.r[1].toFixed(1)+'k</span><span class="usd">$'+Math.round(h.r[0]*1000/FX/10)*10+'–'+Math.round(h.r[1]*1000/FX/10)*10+'</span></td>';
+    tb.appendChild(tr);
+  });
+})();
+buildSliders();
+renderRank();
+</script>
+</body></html>
